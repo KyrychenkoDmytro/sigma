@@ -1,0 +1,187 @@
+@import './fonts';
+@import '../css/normalize.css';
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+button,
+select {
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'Volkhov', serif;
+}
+
+.header {
+    overflow: hidden;
+    background: url(../assets/img/Decore.jpg) right top / contain no-repeat;
+
+    &__nav {
+        min-height: 105px;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Google Sans', sans-serif;
+        font-size: 17px;
+        font-weight: 500;
+        color: #212832;
+
+        nav {
+            height: 40px;
+            flex: 0 1 640px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 45px;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: inherit;
+            }
+        }
+    }
+
+    &__login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 45px;
+        height: 40px;
+        padding-left: 70px;
+
+        button {
+            width: 102px;
+            height: inherit;
+            border: 1px solid #212832;
+            color: #212832;
+            border-radius: 5px;
+            background-color: transparent;
+        }
+
+        select {
+            border: none;
+            background-color: transparent;
+            color: #212832;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+        }
+    }
+
+    .subheader-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 80px 0;
+        background: right top / contain no-repeat url(../assets/img/Traveller.png),
+            103% 15% / 15% no-repeat url(../assets/img/plane.png);
+
+        &::after {
+            content: url(../assets/img/plane.png);
+            display: block;
+            position: absolute;
+            top: 6%;
+            left: 48%;
+            cursor: pointer;
+        }
+    }
+
+    &__subheader-info {
+        flex: 0 1 51.2%;
+    }
+
+    &__top-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #DF6951;
+        text-transform: uppercase;
+        margin: 0 0 24px 0;
+    }
+
+    &__title {
+        font-size: 84px;
+        font-weight: 700;
+        color: #181E4B;
+        margin: 0 0 40px 0;
+    }
+
+    &__desc {
+        padding: 0 26% 0 0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px;
+        color: #5E6282;
+    }
+
+    &__btn-wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 34px;
+        gap: 39px;
+    }
+
+    &__btn-find-more {
+        width: 170px;
+        height: 60px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-family: 'Google Sans', sans-serif;
+        background-color: #F1A501;
+        color: #fff;
+    }
+
+    &__label-play-demo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 17px;
+        font-weight: 500;
+        color: #686D77;
+    }
+
+    &__btn-play-demo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: #DF6951;
+
+        &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-left-color: #fff;
+            position: relative;
+            left: 7px;
+        }
+    }
+}
+
+@import './media';

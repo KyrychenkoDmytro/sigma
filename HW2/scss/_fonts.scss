@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600&family=Poppins:wght@400;500;600;700&family=Roboto&family=Volkhov:wght@700&display=swap');
+
+@font-face {
+    font-family: 'Google Sans';
+    src: local('Google Sans Medium'),
+        local('GoogleSans-Medium'),
+        url('../assets/fonts/GoogleSans-Medium.woff2') format('woff2'),
+        url('../assets/fonts/GoogleSans-Medium.woff') format('woff'),
+        url('../assets/fonts/GoogleSans-Medium.eot') format('eot'),
+        url('../assets/fonts/GoogleSans-Medium.ttf') format('truetype'),
+        url('../assets/fonts/GoogleSans-Medium.otf') format("opentype"),
+        url('../assets/fonts/GoogleSans-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Google Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Volkhov', serif;

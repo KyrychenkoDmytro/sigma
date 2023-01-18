@@ -1,0 +1,144 @@
+@media (max-width: 1199.98px) {
+    .header {
+        &__title {
+            font-size: 70px;
+        }
+    }
+}
+
+@media (max-width: 999.98px) {
+    .header {
+        &__title {
+            font-size: 58px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .header {
+        &__nav {
+            flex-wrap: wrap;
+            gap: 20px;
+
+            nav {
+                justify-content: flex-start;
+                order: 3;
+            }
+        }
+
+        &__login {
+            gap: 30px;
+        }
+
+        .subheader-wrap {
+            background: right top / 60% no-repeat url(../assets/img/Traveller.png),
+                103% 10% / 15% no-repeat url(../assets/img/plane.png);
+
+            &::after {
+                top: -8%;
+                left: 45%;
+            }
+        }
+    }
+}
+
+@media (max-width: 839.98px) {
+    .header {
+        &__top-title {
+            font-size: 18px;
+        }
+
+        &__title {
+            font-size: 53px;
+        }
+
+        &__desc {
+            padding: 0 10% 0 0;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .header {
+        &__nav {
+
+            nav {
+                flex: 1 1 auto;
+                justify-content: center;
+            }
+
+        }
+
+        &__login {
+            gap: 20px;
+        }
+
+        .subheader-wrap {
+            padding: 40px 0;
+            background: transparent;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        &__subheader-info {
+            flex: 1 1 100%;
+            text-align: center;
+        }
+
+        &__btn-wrap {
+            justify-content: center;
+        }
+
+        &__desc {
+            padding-right: 0;
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .header {
+        &__nav {
+            flex-direction: column;
+
+            nav {
+                gap: 20px;
+                overflow: auto;
+                width: 100%;
+            }
+
+        }
+
+        &__login {
+            padding-left: 0;
+        }
+
+        .subheader-wrap {
+            padding: 20px 0;
+        }
+
+        &__top-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            font-size: 46px;
+            margin-bottom: 20px;
+        }
+
+        &__btn-wrap {
+            gap: 20px;
+        }
+
+        &__label-play-demo {
+            gap: 10px;
+            font-size: 16px;
+        }
+    }
+}
