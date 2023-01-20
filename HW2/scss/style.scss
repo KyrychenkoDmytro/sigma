@@ -22,13 +22,23 @@ select {
     margin: 0 auto;
 }
 
+.top-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #5E6282;
+}
+
 .title {
+    margin: 20px 0 0 0;
     font-family: 'Volkhov', serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #14183E;
 }
 
 .header {
     overflow: hidden;
-    background: url(../assets/img/decore.jpg) right top / contain no-repeat;
+    background: url(../assets/img/decore-header.jpg) right top / contain no-repeat;
 
     &__nav {
         min-height: 105px;
@@ -189,17 +199,10 @@ select {
     text-align: center;
 
     &__top-title {
-        font-size: 18px;
-        font-weight: 600;
         text-transform: uppercase;
-        color: #5E6282;
     }
 
     &__title {
-        font-size: 50px;
-        font-weight: 700;
-        color: #14183E;
-        margin: 20px 0 0 0;
         position: relative;
 
         &::after {
@@ -341,6 +344,97 @@ select {
             line-height: 26px;
             font-weight: 500;
             color: #5E6282;
+        }
+    }
+}
+
+.destinations {
+    padding: 40px 0;
+    text-align: center;
+
+    &__cards-wrap {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+    }
+
+    &__card {
+        position: relative;
+        z-index: 10;
+
+        &:first-child {
+            .destinations__card-container {
+                background: center -3px / 152% 140% no-repeat url(../assets/img/rome.jpg);
+            }
+        }
+
+        &:nth-child(2) {
+            .destinations__card-container {
+                background: center -3px / 152% 140% no-repeat url(../assets/img/london.jpg);
+            }
+        }
+
+        &:last-child {
+            margin: 0 60px 0 25px;
+
+            .destinations__card-container {
+                background: center -3px / 152% 140% no-repeat url(../assets/img/europe.jpg);
+            }
+
+            &::after {
+                content: url(../assets/img/decore-destination.png);
+                position: absolute;
+                right: -65px;
+                bottom: 40px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__card-container {
+        max-width: 315px;
+        height: 457px;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3);
+        transition: transform .3s ease, box-shadow .3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 3px 14px 3px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &__card-info {
+        height: 130px;
+        padding: 27px 20px 40px;
+        border-radius: 0 0 24px 24px;
+        background-color: #fff;
+        color: #5E6282;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px 40px;
+    }
+
+    &__card-name,
+    &__card-price {
+        font-size: 18px;
+    }
+
+    &__card-duration {
+        position: relative;
+        padding-left: 32px;
+
+        &::before {
+            content: url(../assets/img/navigation.svg);
+            position: absolute;
+            left: 0;
         }
     }
 }
