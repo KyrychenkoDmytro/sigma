@@ -1,0 +1,92 @@
+.destinations {
+    padding: 40px 0;
+    text-align: center;
+
+    &__cards-wrap {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+    }
+
+    &__card {
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+
+        &:first-child {
+            .destinations__card-container {
+                background: center -3px / 152% 140% no-repeat url(../assets/img/destinations/destination-rome.png);
+            }
+        }
+
+        &:nth-child(2) {
+            .destinations__card-container {
+                background: center -3px / 152% 140% no-repeat url(../assets/img/destinations/destination-london.png);
+            }
+        }
+
+        &:last-child {
+            margin: 0 60px 0 25px;
+
+            .destinations__card-container {
+                background: center -3px / 152% 140% no-repeat url(../assets/img/destinations/destination-europe.png);
+            }
+
+            &::after {
+                content: url(../assets/img/destinations/destination-decore.png);
+                position: absolute;
+                right: -65px;
+                bottom: 40px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__card-container {
+        max-width: 315px;
+        min-height: 457px;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        // box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3);
+        filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+        transition: transform .3s ease, box-shadow .3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 3px 14px 3px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &__card-info {
+        min-height: 130px;
+        padding: 27px 20px 40px;
+        border-radius: 0 0 23px 23px;
+        background-color: #fff;
+        color: #5E6282;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px 40px;
+    }
+
+    &__card-name,
+    &__card-price {
+        font-size: 18px;
+    }
+
+    &__card-duration {
+        position: relative;
+        padding-left: 32px;
+
+        &::before {
+            content: url(../assets/img/destinations/destination-navigation.svg);
+            position: absolute;
+            left: 0;
+        }
+    }
+}

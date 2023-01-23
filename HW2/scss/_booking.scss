@@ -1,0 +1,262 @@
+.booking {
+    padding: 100px 0;
+
+    &__wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &__col-text {
+        flex: 0 1 50%;
+        max-width: 565px;
+    }
+
+    &__title {
+        text-transform: capitalize;
+    }
+
+    &__steps {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    &__step {
+        width: 80%;
+        padding-left: 70px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            border-radius: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 0;
+            position: absolute;
+            left: 0;
+        }
+
+        &:first-child::before {
+            background-color: #F0BB1F;
+            content: url(../assets/img/booking/booking-step-1.svg);
+        }
+
+        &:nth-child(2)::before {
+            background-color: #F15A2B;
+            content: url(../assets/img/booking/booking-step-2.svg);
+        }
+
+        &:last-child::before {
+            background-color: #006380;
+            content: url(../assets/img/booking/booking-step-3.svg);
+        }
+    }
+
+    &__step-header {
+        margin: 0;
+        color: #5E6282;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__step-text {
+        margin: 5px 0 0 0;
+        color: #5E6282;
+        font-size: 16px;
+    }
+
+    &__col-card {
+        position: relative;
+        z-index: 10;
+        flex: 0 0 500px;
+        align-self: flex-end;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 354px;
+            height: 367px;
+            border-radius: 50%;
+            top: -60px;
+            left: 60px;
+            background: #59B1E6;
+            opacity: 0.8;
+            filter: blur(75px);
+            z-index: -1;
+        }
+    }
+
+    &__card {
+        position: relative;
+        max-width: 370px;
+        min-height: 400px;
+        padding: 25px;
+        background-color: #fff;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+        border-radius: 26px;
+    }
+
+    &__card-img {
+        width: 100%;
+        height: 160px;
+        border-radius: 24px;
+        background: center / cover no-repeat url(../assets/img/booking/booking-card.jpg);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border: 1px solid #000;
+    }
+
+    &__card-header {
+        margin: 26px 0 13px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #080809;
+    }
+
+    &__card-duration-trip {
+        margin-bottom: 21px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #84829A;
+
+        span {
+            margin: 0 13px 0 3px;
+            font-weight: 400;
+        }
+    }
+
+    &__card-icons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 18px;
+    }
+
+    &__card-icon {
+        margin-bottom: 30px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #F5F5F5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 0;
+        cursor: pointer;
+
+        &:first-child::before {
+            content: url(../assets/img/booking/booking-leaf.svg);
+        }
+
+        &:nth-child(2)::before {
+            content: url(../assets/img/booking/booking-map.svg);
+        }
+
+        &:last-child::before {
+            content: url(../assets/img/booking/booking-send.svg);
+        }
+    }
+
+    &__card-people-going {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__card-people-number {
+        position: relative;
+        padding-left: 31px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #84829A;
+
+        &::before {
+            content: url(../assets/img/booking/booking-house.svg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 0;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &__card-btn-like {
+        background-color: transparent;
+
+        &::before {
+            content: url(../assets/img/booking/booking-heart.svg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 0;
+        }
+    }
+
+    &__card-pop-up {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        transform: translateX(50%);
+        height: 130px;
+        width: 260px;
+        border-radius: 18px;
+        padding: 20px 20px 20px 82px;
+        background-color: #fff;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+
+        &::before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background: center / cover no-repeat url(../assets/img/booking/booking-pop-up.png);
+            border-radius: 50%;
+            position: absolute;
+            left: 20px;
+        }
+    }
+
+    &__pop-up-top-title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #84829A;
+    }
+
+    &__pop-up-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: #080809;
+        margin: 6px 0 14px;
+    }
+
+    &__pop-up-completed {
+        font-size: 14px;
+        font-weight: 500;
+        color: #080809;
+
+        span {
+            color: #8A79DF;
+        }
+    }
+
+    &__pop-up-outer-loader {
+        margin-top: 10px;
+        width: 100%;
+        height: 5px;
+        border-radius: 30px;
+        background-color: #F5F5F5;
+    }
+
+    &__pop-up-inner-loader {
+        height: inherit;
+        width: 40%;
+        border-radius: 30px;
+        background-color: #8A79DF;
+    }
+}
