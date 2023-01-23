@@ -1,0 +1,36 @@
+.logos {
+    padding: 60px 0;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__item {
+        padding: 15px 40px;
+        height: 80px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: background-color .4s ease, box-shadow .4s ease;
+
+        img {
+            filter: grayscale(100%);
+            transition: filter .4s ease;
+        }
+
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+
+            img {
+                filter: grayscale(0);
+            }
+        }
+
+    }
+}
