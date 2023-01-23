@@ -752,6 +752,74 @@ select {
   background-color: #8A79DF;
 }
 
+.testimonials {
+  padding: 100px 0;
+}
+.testimonials__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 80px;
+}
+.testimonials__col-titles {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  max-width: 450px;
+}
+.testimonials__title {
+  text-transform: capitalize;
+}
+.testimonials__col-comments {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 500px;
+          flex: 0 0 500px;
+}
+.testimonials__comments-wrap {
+  position: relative;
+  max-width: 500px;
+  padding: 30px;
+  margin-top: 40px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+          box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  border-radius: 10px;
+}
+.testimonials__comments-wrap::before {
+  content: url(../assets/img/testimonials/testimonials-avatar.png);
+  width: 68px;
+  height: 68px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.testimonials__comments-text {
+  width: 90%;
+  margin: 0;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #5E6282;
+}
+.testimonials__comments-name {
+  margin: 34px 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5E6282;
+}
+.testimonials__comments-location {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5E6282;
+}
+
 @media (max-width: 1439.98px) {
   .services__title::after {
     -webkit-transform: translate(0%, -50%);
@@ -848,11 +916,17 @@ select {
   .destinations__card:last-child::after {
     content: none;
   }
+  .booking {
+    padding: 60px 0;
+  }
   .booking__wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .booking__col-text {
     max-width: 100%;
@@ -874,6 +948,35 @@ select {
   }
   .booking__card {
     margin: 0 auto;
+  }
+  .testimonials {
+    padding: 60px 0;
+  }
+  .testimonials__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .testimonials__col-titles {
+    max-width: 100%;
+  }
+  .testimonials__top-title {
+    text-align: center;
+  }
+  .testimonials__title {
+    text-align: center;
+  }
+  .testimonials__col-comments {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
 }
 @media (max-width: 839.98px) {
@@ -938,6 +1041,15 @@ select {
   .booking__col-card {
     padding-right: 130px;
   }
+  .testimonials__col-comments {
+    padding-left: 34px;
+  }
+  .testimonials__comments-text {
+    width: 100%;
+  }
+  .testimonials__wrap {
+    gap: 60px;
+  }
 }
 @media (max-width: 479.98px) {
   .container {
@@ -987,6 +1099,9 @@ select {
   .booking {
     padding: 40px 0;
   }
+  .booking__wrap {
+    gap: 40px;
+  }
   .booking__step {
     width: 100%;
   }
@@ -998,5 +1113,19 @@ select {
     left: 50%;
     -webkit-transform: translate(-50%, 40px);
             transform: translate(-50%, 40px);
+  }
+  .testimonials {
+    padding: 40px 0;
+  }
+  .testimonials__comments-wrap {
+    padding: 10px;
+  }
+  .testimonials__comments-wrap::before {
+    top: -30px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .testimonials__col-comments {
+    padding-left: 0;
   }
 }/*# sourceMappingURL=style.css.map */
