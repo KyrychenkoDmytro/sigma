@@ -1,6 +1,6 @@
 .header {
     overflow: hidden;
-    background: url(../assets/img/header/header-decore-bg.jpg) right top / contain no-repeat;
+    background: center /cover no-repeat url(../assets/img/header/header-decore-bg.jpg);
 
     &__nav {
         min-height: 105px;
@@ -74,7 +74,7 @@
             content: url(../assets/img/plane.svg);
             display: block;
             position: absolute;
-            top: 6%;
+            top: 5%;
             left: 48%;
             cursor: pointer;
         }
