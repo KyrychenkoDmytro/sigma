@@ -7,11 +7,11 @@
         .subheader-wrap {
             background: right top / 65% no-repeat url(../assets/img/header/header-traveller-bg.png),
                 103% 15% / 15% no-repeat url(../assets/img/plane.svg);
+        }
 
-            &::after {
-                top: 0;
-                left: 46%;
-            }
+        &__animation-airplane {
+            top: 0;
+            left: 46%;
         }
 
         &__title {
@@ -185,12 +185,12 @@
             padding: 40px 0;
             background: right top / 60% no-repeat url(../assets/img/header/header-traveller-bg.png),
                 103% 10% / 15% no-repeat url(../assets/img/plane.svg);
-
-            &::after {
-                transform: scale(.7);
-                top: -9%;
-                left: 42%;
-            }
+        }
+        
+        &__animation-airplane {
+            transform: scale(.7);
+            top: -9%;
+            left: 42%;
         }
 
         &__top-title {
@@ -401,9 +401,10 @@
             padding: 30px 0;
             background: transparent;
 
-            &::after {
-                content: none;
-            }
+        }
+
+        &__animation-airplane {
+            display: none;
         }
 
         &__subheader-info {

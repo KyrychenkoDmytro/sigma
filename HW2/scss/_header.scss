@@ -26,6 +26,12 @@
                 justify-content: center;
                 align-items: center;
                 height: inherit;
+                transition: all .3s ease;
+
+                &:hover {
+                    transform: scale(1.15);
+                    color: #074fb5;
+                }
             }
         }
     }
@@ -38,26 +44,31 @@
         height: 40px;
         padding-left: 70px;
 
-        button {
+        &-btn {
             width: 102px;
             height: inherit;
-            border: 1px solid #212832;
             color: #212832;
             border-radius: 5px;
             background-color: transparent;
+            transition: all .3s ease;
+
+            &:hover {
+                border: 1px solid #212832;
+                transform: scale(1.15);
+                color: #074fb5;
+            }
         }
 
-        select {
+        &-select {
             border: none;
             background-color: transparent;
             color: #212832;
-        }
+            transition: all .3s ease;
 
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: inherit;
+            &:hover {
+                transform: scale(1.15);
+                color: #074fb5;
+            }
         }
     }
 
@@ -69,15 +80,6 @@
         padding: 80px 0;
         background: right top / contain no-repeat url(../assets/img/header/header-traveller-bg.png),
             103% 15% / 15% no-repeat url(../assets/img/plane.svg);
-
-        &::after {
-            content: url(../assets/img/plane.svg);
-            display: block;
-            position: absolute;
-            top: 5%;
-            left: 48%;
-            cursor: pointer;
-        }
     }
 
     &__subheader-info {
@@ -123,6 +125,11 @@
         font-family: 'Google Sans', sans-serif;
         background-color: #F1A501;
         color: #fff;
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: scale(1.15);
+        }
     }
 
     &__label-play-demo {
@@ -143,6 +150,11 @@
         height: 52px;
         border-radius: 50%;
         background-color: #DF6951;
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: scale(1.15);
+        }
 
         &::after {
             content: "";
@@ -152,6 +164,40 @@
             border-left-color: #fff;
             position: relative;
             left: 7px;
+        }
+    }
+
+    &__animation-airplane {
+        width: 167px;
+        height: 154px;
+        position: absolute;
+        top: 5%;
+        left: 48%;
+        cursor: pointer;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover img {
+            animation-name: airplane;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    @keyframes airplane {
+        0% {
+            left: 0;
+            top: 0;
+        }
+
+        100% {
+            left: 600px;
+            top: -300px;
         }
     }
 }

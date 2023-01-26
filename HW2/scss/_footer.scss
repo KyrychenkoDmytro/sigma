@@ -69,6 +69,14 @@
         gap: 12px;
     }
 
+    &__navbar li {
+        transition: transfrom .3s ease;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
     &__nav-link {
         font-size: 18px;
         line-height: 22px;
@@ -99,8 +107,13 @@
         color: #080809;
         background-color: #fff;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-        transition: color .6s ease;
+        transition: all .3s ease;
 
+        &:hover {
+            color: #181E4B;
+            transform: scale(1.2);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+        }
     }
 
     &__media-wrap li:nth-child(2) .footer__icon {
@@ -128,6 +141,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all .3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+            border-radius: 30px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+        }
     }
 
     &__copyrights {

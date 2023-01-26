@@ -106,12 +106,12 @@
         color: #fff;
         border: none;
         outline: none;
-        transition: font-size .1s ease;
+        transition: transform .3s ease;
 
         &:focus,
         &:hover {
             background: #5E6282;
-            font-size: 19px;
+            transform: scale(1.1);
         }
     }
 }
