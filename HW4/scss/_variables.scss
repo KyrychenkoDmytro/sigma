@@ -4,12 +4,22 @@ $color-green: #37806B;
 $color-cream: #CAA892;
 $fz-text: 18px;
 
-%subtitle {
+%btn {
+    background-color: $color-green;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+%section-subtitle {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
     color: $color-grey;
+    margin: 0 0 20px;
 }
 
 %section-title {
@@ -18,4 +28,5 @@ $fz-text: 18px;
     font-weight: 500;
     line-height: 60px;
     color: $color-black;
+    margin: 0;
 }

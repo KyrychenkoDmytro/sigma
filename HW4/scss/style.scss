@@ -9,9 +9,25 @@ body {
     background-color: #fff;
 }
 
+p {
+    margin: 0;
+}
+
 button,
 select {
     cursor: pointer;
+}
+
+.btn {
+    @extend %btn;
+}
+
+.title {
+    @extend %section-title;
+}
+
+.subtitle {
+    @extend %section-subtitle;
 }
 
 .container {
@@ -31,6 +47,7 @@ select {
         max-width: 1140px;
     }
 }
+
 //tablet
 @media (max-width: 1199.98px) {
     .container {
@@ -44,6 +61,7 @@ select {
         padding: 0 10px;
     }
 }
+
 // mobile
 @media (max-width: 759.98px) {
     .container {
@@ -63,3 +81,4 @@ select {
 }
 
 @import './header';
+@import './interior';
