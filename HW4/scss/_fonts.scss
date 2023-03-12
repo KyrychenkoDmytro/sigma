@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600&family=Raleway:wght@500&display=swap');
+
+@font-face {
+    font-family: 'Basic Sans SF';
+    src: local('Basic Sans SF Bold'),
+        local('BasicSansSF-Bold'),
+        url('../assets/fonts/BasicSansSF-Bold.woff2') format('woff2'),
+        url('../assets/fonts/BasicSansSF-Bold.woff') format('woff'),
+        url('../assets/fonts/BasicSansSF-Bold.eot') format('eot'),
+        url('../assets/fonts/BasicSansSF-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+// font-family: 'Open Sans', sans-serif; for text and h4,h5,h6 (main)
+// font-family: 'Poppins', sans-serif; for h1,h2, h3(subtitle)
+// font-family: 'Raleway', sans-serif; placeholder form input
+// font-family: 'Basic Sans SF', serif; " in TESTIMONIALS section

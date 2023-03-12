@@ -1,0 +1,14 @@
+@import './fonts';
+@import './variables';
+@import '../css/normalize.css';
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $fz-text;
+    background-color: #fff;
+  }
+  
+  button,
+  select {
+    cursor: pointer;
+  }
