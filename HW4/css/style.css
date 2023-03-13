@@ -22,7 +22,7 @@
   font-weight: 500;
   text-transform: uppercase;
   color: #646464;
-  margin: 0 0 20px;
+  margin: 0;
 }
 
 .title {
@@ -142,6 +142,7 @@ select {
   background-color: #CAA892;
   color: #fff;
   margin-left: 60px;
+  margin-right: 14px;
   font-size: 16px;
   font-weight: 600;
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -159,10 +160,13 @@ select {
     margin: 0;
   }
   .header__sign-up {
-    margin: 0;
+    margin-left: 0;
   }
 }
 @media (max-width: 1199.98px) {
+  .header__sign-up {
+    margin-right: 0;
+  }
   .header__nav ul {
     gap: 30px;
   }
@@ -222,7 +226,7 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: 50px;
 }
 .interior__info {
   -webkit-box-flex: 0;
@@ -232,6 +236,7 @@ select {
 }
 .interior__sibetitle {
   font-weight: 600;
+  margin-bottom: 20px;
 }
 .interior__title {
   font-size: 72px;
@@ -249,11 +254,10 @@ select {
   font-size: 18px;
 }
 .interior__image {
-  width: 100%;
   height: 620px;
   position: relative;
   top: 34px;
-  left: 34px;
+  left: 20px;
   border: 2px solid #B0855B;
   border-radius: 140px 0px;
   -webkit-box-flex: 0;
@@ -283,9 +287,6 @@ select {
     font-size: 48px;
     line-height: 64px;
   }
-  .interior__image {
-    left: 20px;
-  }
   .interior__image img {
     left: -20px;
   }
@@ -301,5 +302,110 @@ select {
   }
   .interior__text {
     margin-bottom: 40px;
+  }
+}
+.about-us {
+  position: relative;
+  margin-bottom: 240px;
+}
+.about-us::before {
+  content: " . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .";
+  height: 150px;
+  font-size: 22px;
+  line-height: 8px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #EBEBEB;
+  white-space: pre;
+  position: absolute;
+  bottom: -212px;
+  left: -10px;
+}
+.about-us__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 140px;
+}
+.about-us__image {
+  height: 710px;
+  position: relative;
+  left: -20px;
+  border: 2px solid #B0855B;
+  border-radius: 140px 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 55%;
+          flex: 0 1 55%;
+}
+.about-us__image img {
+  display: block;
+  max-width: 100%;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 140px 0px;
+  position: relative;
+  top: 34px;
+  left: 34px;
+}
+.about-us__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
+}
+.about-us__sibetitle {
+  font-weight: 600;
+  margin: 20px 0 60px;
+}
+.about-us__title {
+  margin-bottom: 30px;
+}
+.about-us__text {
+  line-height: 30px;
+  margin-bottom: 60px;
+}
+.about-us__btn {
+  padding: 14px 30px;
+  border-radius: 20px 0;
+  font-size: 18px;
+}
+
+@media (max-width: 1439.98px) {
+  .about-us__wrap {
+    gap: 80px;
+  }
+  .about-us__title {
+    font-size: 42px;
+    line-height: 54px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .about-us__wrap {
+    gap: 60px;
+  }
+  .about-us__image img {
+    left: 20px;
+  }
+  .about-us__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-us__wrap {
+    gap: 30px;
+  }
+  .about-us__sibetitle {
+    margin-bottom: 30px;
+  }
+  .about-us__title {
+    font-size: 29px;
+    line-height: 44px;
+    margin-bottom: 20px;
+  }
+  .about-us__text {
+    margin-bottom: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

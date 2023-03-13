@@ -46,6 +46,7 @@
         background-color: $color-cream;
         color: #fff;
         margin-left: 60px;
+        margin-right: 14px;
         font-size: 16px;
         font-weight: 600;
         transition: transform .3s ease;
@@ -64,13 +65,16 @@
         }
 
         &__sign-up {
-            margin: 0;
+            margin-left: 0;
         }
     }
 }
 
 @media (max-width:1199.98px) {
     .header {
+        &__sign-up {
+            margin-right: 0;
+        }
 
         &__nav {
             ul {
