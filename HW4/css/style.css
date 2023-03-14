@@ -50,6 +50,21 @@ select {
   cursor: pointer;
 }
 
+.btn {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.btn:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.wrapper {
+  position: relative;
+}
+
 .container {
   max-width: 1440px;
   padding: 0 20px;
@@ -94,7 +109,12 @@ select {
 
 .header {
   min-height: 47px;
-  margin: 90px 0;
+  margin: 50px 0;
+  padding: 20px 0;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .header__wrap {
   display: -webkit-box;
@@ -110,6 +130,10 @@ select {
 .header__logo {
   line-height: 0;
 }
+.header__logo a {
+  display: block;
+  height: inherit;
+}
 .header__nav {
   margin-left: auto;
 }
@@ -117,23 +141,25 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  gap: 16px;
   margin: 0;
 }
 .header__nav ul li a {
   display: block;
   height: inherit;
+  padding: 8px 16px;
   font-size: 16px;
   font-weight: 600;
   color: #212121;
   text-transform: uppercase;
+  border: 5px solid transparent;
+  border-radius: 20px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .header__nav ul li a:hover {
-  color: #646464;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  color: #37806B;
+  border: 5px solid #37806B;
 }
 .header__sign-up {
   display: block;
@@ -151,8 +177,8 @@ select {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .header__sign-up:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 @media (max-width: 1439.98px) {
@@ -167,11 +193,6 @@ select {
   .header__sign-up {
     margin-right: 0;
   }
-  .header__nav ul {
-    gap: 30px;
-  }
-}
-@media (max-width: 991.98px) {
   .header__wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -198,6 +219,14 @@ select {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+@media (max-width: 991.98px) {
+  .header__nav ul {
+    gap: 10px;
+  }
+  .header__nav ul li a {
+    padding: 8px 12px;
   }
 }
 .interior {
@@ -295,6 +324,9 @@ select {
   .interior__wrap {
     gap: 20px;
   }
+  .interior__sibetitle {
+    font-size: 16px;
+  }
   .interior__title {
     font-size: 36px;
     line-height: 52px;
@@ -302,6 +334,136 @@ select {
   }
   .interior__text {
     margin-bottom: 40px;
+  }
+}
+.what-we-do {
+  position: relative;
+  padding-bottom: 240px;
+}
+.what-we-do::after {
+  content: " . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .";
+  height: 150px;
+  font-size: 22px;
+  line-height: 8px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #EBEBEB;
+  white-space: pre;
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+  z-index: -2;
+}
+.what-we-do__sibetitle {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.what-we-do__title {
+  margin-bottom: 50px;
+  text-align: left;
+}
+.what-we-do__wrap-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+  margin-bottom: 110px;
+}
+.what-we-do__btn {
+  width: 200px;
+  height: 46px;
+  border-radius: 20px;
+  background-color: #37806B;
+  border: 5px solid #37806B;
+}
+.what-we-do__btn_active {
+  background-color: #fff;
+  color: #37806B;
+}
+.what-we-do__wrap-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 80px 20px;
+}
+.what-we-do__info-block {
+  width: 420px;
+  min-height: 160px;
+  padding: 30px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 22px;
+  border-radius: 60px 0;
+  color: #212121;
+  -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
+}
+.what-we-do__info-block:nth-child(2) {
+  background-color: #CAA892;
+}
+.what-we-do__info-block:nth-child(2) .what-we-do__info-text h4 {
+  color: #fff;
+}
+.what-we-do__info-block:nth-child(2) .what-we-do__info-text p {
+  color: #fff;
+}
+.what-we-do__info-text h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.what-we-do__info-text p {
+  color: #646464;
+}
+
+@media (max-width: 1439.98px) {
+  .what-we-do__title {
+    font-size: 42px;
+    line-height: 54px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .what-we-do__title {
+    font-size: 36px;
+  }
+  .what-we-do__wrap-buttons {
+    gap: 40px;
+  }
+  .what-we-do__wrap-info {
+    gap: 60px 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .what-we-do__sibetitle {
+    font-size: 16px;
+  }
+  .what-we-do__title {
+    font-size: 29px;
+    line-height: 44px;
+  }
+  .what-we-do__wrap-buttons {
+    gap: 15px;
+    margin-bottom: 80px;
+  }
+  .what-we-do__wrap-info {
+    gap: 30px 20px;
+  }
+  .what-we-do__info-block {
+    width: 340px;
+    padding: 20px 15px;
+    gap: 18px;
+    border-radius: 40px 0;
   }
 }
 .about-us {
@@ -398,6 +560,7 @@ select {
     gap: 30px;
   }
   .about-us__sibetitle {
+    font-size: 16px;
     margin-bottom: 30px;
   }
   .about-us__title {
@@ -445,7 +608,13 @@ select {
           flex: 0 1 45%;
 }
 .underAbout-us__sibetitle {
-  margin: 0 0 40px;
+  margin: 0;
+  font-size: 200px;
+  line-height: 1;
+  background: url("../assets/img/1234.jpg") no-repeat left 25%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 .underAbout-us__title {
   margin-bottom: 60px;
@@ -668,6 +837,9 @@ select {
   }
 }
 @media (max-width: 991.98px) {
+  .completed-work__sibetitle {
+    font-size: 16px;
+  }
   .completed-work__title {
     font-size: 29px;
     line-height: 44px;

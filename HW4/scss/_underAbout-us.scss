@@ -30,7 +30,12 @@
     }
 
     &__sibetitle {
-        margin: 0 0 40px;
+        margin: 0;
+        font-size: 200px;
+        line-height: 1;
+        background: url("../assets/img/1234.jpg") no-repeat left 25%;
+        background-clip: text;
+        color: transparent;
     }
 
     &__title {

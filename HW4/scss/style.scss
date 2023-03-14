@@ -20,6 +20,11 @@ select {
 
 .btn {
     @extend %btn;
+    transition: transform .3s ease;
+
+    &:hover {
+        transform: scale(1.15);
+    }
 }
 
 .title {
@@ -28,6 +33,10 @@ select {
 
 .subtitle {
     @extend %section-subtitle;
+}
+
+.wrapper {
+    position: relative;
 }
 
 .container {
@@ -82,6 +91,7 @@ select {
 
 @import './header';
 @import './interior';
+@import './what-we-do';
 @import './about-us';
 @import './underAbout-us';
 @import './completed-work';
