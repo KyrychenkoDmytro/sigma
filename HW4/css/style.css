@@ -1023,33 +1023,33 @@ select {
     line-height: 44px;
   }
   .testimonials__slider-content {
-    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .testimonials__slider-item {
-    margin-left: 0;
-    padding: 30px 20px 20px;
-    border-radius: 30px 0;
-  }
-  .testimonials__slider-item h4 {
-    margin: 30px 0 20px;
-  }
-  .testimonials__item-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  .testimonials__item-logo img {
-    border-radius: 50%;
+  .testimonials__slider-item:nth-child(2) {
+    display: none;
   }
 }
 .blog {
   position: relative;
   padding: 100px 0;
   background-color: #F8F8F8;
+}
+.blog::after {
+  content: " . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .";
+  height: 150px;
+  font-size: 22px;
+  line-height: 8px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #EBEBEB;
+  white-space: pre;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
 }
 .blog__sibetitle {
   text-align: center;
@@ -1075,7 +1075,7 @@ select {
           flex: 0 1 41%;
 }
 .blog__wrap-design:nth-child(2) {
-  right: 34px;
+  right: 14px;
 }
 .blog__design-image {
   position: relative;
@@ -1096,6 +1096,8 @@ select {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
   border-radius: 100px 0px;
 }
 .blog__design-title {
@@ -1110,6 +1112,7 @@ select {
   margin-bottom: 40px;
 }
 .blog__btn {
+  display: block;
   padding: 14px 35px;
   border-radius: 25px 0;
   font-size: 18px;
@@ -1141,7 +1144,7 @@ select {
             flex: 0 1 44%;
   }
   .blog__wrap-design:nth-child(2) {
-    right: 20px;
+    right: 0;
   }
   .blog__design-image {
     top: 20px;
@@ -1155,6 +1158,11 @@ select {
   }
 }
 @media (max-width: 991.98px) {
+  .blog__wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .blog__sibetitle {
     font-size: 16px;
   }
@@ -1162,22 +1170,23 @@ select {
     font-size: 29px;
     line-height: 44px;
   }
-  .blog__wrap {
-    gap: 40px;
+  .blog__wrap-design:nth-child(2) {
+    display: none;
   }
   .blog__wrap-design {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%;
+        -ms-flex: 0 1 86%;
+            flex: 0 1 86%;
   }
   .blog__design-title {
+    height: 30px;
     font-size: 24px;
+    text-align: center;
   }
   .blog__design-text {
-    line-height: 24px;
+    text-align: center;
   }
   .blog__btn {
-    padding: 14px 30px;
-    font-size: 16px;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */
