@@ -12,7 +12,7 @@
   background-color: #37806B;
   color: #fff;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
@@ -169,7 +169,6 @@ select {
   background-color: #CAA892;
   color: #fff;
   margin-left: 60px;
-  margin-right: 14px;
   font-size: 16px;
   font-weight: 600;
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -221,6 +220,12 @@ select {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .header__nav ul li:first-child a {
+    margin-left: -20px;
+  }
+  .header__nav ul li:last-child a {
+    margin-right: -20px;
+  }
 }
 @media (max-width: 991.98px) {
   .header__nav ul {
@@ -228,6 +233,12 @@ select {
   }
   .header__nav ul li a {
     padding: 8px 12px;
+  }
+  .header__nav ul li:first-child a {
+    margin-left: -16px;
+  }
+  .header__nav ul li:last-child a {
+    margin-right: -16px;
   }
 }
 .interior {
@@ -287,7 +298,7 @@ select {
   height: 620px;
   position: relative;
   top: 34px;
-  left: 20px;
+  left: 34px;
   border: 2px solid #B0855B;
   border-radius: 140px 0px;
   -webkit-box-flex: 0;
@@ -317,7 +328,12 @@ select {
     font-size: 48px;
     line-height: 64px;
   }
+  .interior__image {
+    top: 20px;
+    left: 20px;
+  }
   .interior__image img {
+    top: -20px;
     left: -20px;
   }
 }
@@ -391,8 +407,9 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 80px 20px;
@@ -496,7 +513,7 @@ select {
 .about-us__image {
   height: 710px;
   position: relative;
-  left: -20px;
+  left: -34px;
   border: 2px solid #B0855B;
   border-radius: 140px 0px;
   -webkit-box-flex: 0;
@@ -549,8 +566,12 @@ select {
   .about-us__wrap {
     gap: 60px;
   }
+  .about-us__image {
+    left: -20px;
+  }
   .about-us__image img {
     left: 20px;
+    top: 20px;
   }
   .about-us__title {
     font-size: 36px;
@@ -609,6 +630,8 @@ select {
           flex: 0 1 45%;
 }
 .underAbout-us__sibetitle {
+  position: relative;
+  left: -6px;
   margin: 0;
   font-size: 200px;
   line-height: 1;
@@ -629,7 +652,7 @@ select {
   height: 710px;
   position: relative;
   top: 34px;
-  left: 20px;
+  left: 34px;
   border: 2px solid #B0855B;
   border-radius: 140px 0px;
   -webkit-box-flex: 0;
@@ -666,11 +689,16 @@ select {
   .underAbout-us__wrap {
     gap: 60px;
   }
-  .underAbout-us__image img {
-    left: -20px;
-  }
   .underAbout-us__title {
     font-size: 36px;
+  }
+  .underAbout-us__image {
+    left: 20px;
+    top: 20px;
+  }
+  .underAbout-us__image img {
+    left: -20px;
+    top: -20px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1074,9 +1102,6 @@ select {
       -ms-flex: 0 1 41%;
           flex: 0 1 41%;
 }
-.blog__wrap-design:nth-child(2) {
-  right: 14px;
-}
 .blog__design-image {
   position: relative;
   top: 34px;
@@ -1143,9 +1168,6 @@ select {
         -ms-flex: 0 1 44%;
             flex: 0 1 44%;
   }
-  .blog__wrap-design:nth-child(2) {
-    right: 0;
-  }
   .blog__design-image {
     top: 20px;
     right: -20px;
@@ -1188,5 +1210,114 @@ select {
   }
   .blog__btn {
     margin: 0 auto;
+  }
+}
+.sign-up {
+  position: relative;
+  padding: 90px 0;
+}
+.sign-up::before {
+  content: " . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .\a  . . . . . . . . . . . . . . . . . . .";
+  height: 150px;
+  font-size: 22px;
+  line-height: 8px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #EBEBEB;
+  white-space: pre;
+  position: absolute;
+  bottom: 0px;
+  left: -10px;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+.sign-up__wrap {
+  margin: 0 auto;
+  max-width: 772px;
+}
+.sign-up__title {
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  line-height: 100px;
+}
+.sign-up__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 55%;
+  height: 1px;
+  background-color: #C4C4C4;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.sign-up__text {
+  margin: 0 auto 40px;
+  text-align: center;
+  width: 85%;
+  line-height: 28px;
+}
+.sign-up__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 60px 12%;
+}
+.sign-up__input {
+  height: 48px;
+  background: #EEEEEE;
+  border-radius: 20px 0px;
+  padding: 10px 20px 10px 30px;
+  border: none;
+}
+.sign-up__input_name {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 44%;
+          flex: 0 1 44%;
+}
+.sign-up__input_last-name {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 44%;
+          flex: 0 1 44%;
+}
+.sign-up__input_email {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+.sign-up__input-submit {
+  margin: 0 auto;
+  padding: 14px 30px 14px 50px;
+  border-radius: 0 0 20px 0;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1439.98px) {
+  .sign-up__title {
+    font-size: 42px;
+  }
+  .sign-up__title::after {
+    width: 45%;
+  }
+}
+@media (max-width: 1199.98px) {
+  .sign-up__title {
+    font-size: 36px;
+  }
+  .sign-up__title::after {
+    width: 38%;
+  }
+}
+@media (max-width: 991.98px) {
+  .sign-up__title {
+    font-size: 29px;
+  }
+  .sign-up__title::after {
+    width: 34%;
   }
 }/*# sourceMappingURL=style.css.map */

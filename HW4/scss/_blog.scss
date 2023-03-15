@@ -40,10 +40,6 @@
         flex: 0 1 41%;
     }
 
-    &__wrap-design:nth-child(2) {
-        right: 14px;
-    }
-
     &__design-image {
         position: relative;
         top: 34px;
@@ -119,10 +115,6 @@
 
         &__wrap-design {
             flex: 0 1 44%;
-        }
-
-        &__wrap-design:nth-child(2) {
-            right: 0;
         }
 
         &__design-image {

@@ -30,6 +30,8 @@
     }
 
     &__sibetitle {
+        position: relative;
+        left: -6px;
         margin: 0;
         font-size: 200px;
         line-height: 1;
@@ -52,7 +54,7 @@
         height: 710px;
         position: relative;
         top: 34px;
-        left: 20px;
+        left: 34px;
         border: 2px solid #B0855B;
         border-radius: 140px 0px;
         flex: 0 1 55%;
@@ -99,14 +101,17 @@
             gap: 60px;
         }
 
-        &__image {
-            img {
-                left: -20px;
-            }
-        }
-
         &__title {
             font-size: 36px;
+        }
+
+        &__image {
+            left: 20px;
+            top: 20px;
+            img {
+                left: -20px;
+                top: -20px;
+            }
         }
     }
 }
