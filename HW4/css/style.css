@@ -353,6 +353,172 @@ select {
     margin-bottom: 40px;
   }
 }
+.project {
+  position: relative;
+  margin-bottom: 240px;
+}
+.project__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 100px;
+}
+.project__image {
+  height: 710px;
+  position: relative;
+  left: -34px;
+  border: 2px solid #B0855B;
+  border-radius: 140px 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 54%;
+          flex: 0 1 54%;
+}
+.project__image img {
+  display: block;
+  max-width: 100%;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 140px 0px;
+  position: relative;
+  top: 34px;
+  left: 34px;
+}
+.project__weather {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 600px;
+          flex: 0 0 600px;
+  position: relative;
+  top: 0px;
+  left: 34px;
+}
+.project__subtitle {
+  font-weight: 500;
+  margin: 20px 0 20px 0;
+}
+.project__title {
+  margin: 0 0 50px 0;
+}
+.project__app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  padding: 30px;
+  position: relative;
+  border: 2px solid #B0855B;
+  border-radius: 0 0 140px 0;
+  font-family: "Raleway", sans-serif;
+}
+.project__app-wrap-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.project__app-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22%;
+  height: 46px;
+  border-radius: 20px;
+  background-color: #37806B;
+  border: 5px solid #37806B;
+  cursor: pointer;
+}
+.project__app-btn_active {
+  background-color: #fff;
+  color: #37806B;
+}
+.project__city-name {
+  font-size: 28px;
+  line-height: 36px;
+  margin: 0;
+  color: #212121;
+}
+
+@media (max-width: 1639.98px) {
+  .project__wrap {
+    gap: 70px;
+  }
+  .project__app-btn {
+    border: 4px solid #37806B;
+  }
+}
+@media (max-width: 1439.98px) {
+  .project__wrap {
+    gap: 40px;
+  }
+  .project__weather {
+    margin-top: 5px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 600px;
+            flex: 0 1 600px;
+  }
+  .project__title {
+    font-size: 42px;
+    line-height: 54px;
+  }
+  .project__app-btn {
+    border: 3px solid #37806B;
+  }
+}
+@media (max-width: 1199.98px) {
+  .project__image {
+    left: -20px;
+  }
+  .project__image img {
+    left: 20px;
+    top: 20px;
+  }
+  .project__weather {
+    left: 20px;
+  }
+  .project__app {
+    padding: 20px;
+  }
+  .project__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 991.98px) {
+  .project__wrap {
+    gap: 10px;
+  }
+  .project__sibetitle {
+    font-size: 16px;
+  }
+  .project__title {
+    font-size: 29px;
+    line-height: 44px;
+  }
+  .project__app-btn {
+    width: 23%;
+    border: 2px solid #37806B;
+  }
+}
 .what-we-do {
   position: relative;
   padding-bottom: 240px;
