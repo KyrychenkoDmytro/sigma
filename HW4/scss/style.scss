@@ -86,7 +86,9 @@ select {
 }
 
 .logo {
-    cursor: pointer;
+    a {
+        cursor: pointer;
+    }
 }
 
 @import './header';
@@ -98,3 +100,4 @@ select {
 @import './testimonials';
 @import './blog';
 @import './sign-up';
+@import './footer';
