@@ -1,27 +1,3 @@
-// скролл
-// const links = document.querySelectorAll('a[href^="#"]');
-
-// // Обрабатываем каждую ссылку
-// links.forEach(link => {
-//   link.addEventListener('click', (event) => {
-//     // Отменяем стандартное поведение ссылки
-//     event.preventDefault();
-
-//     // Получаем целевой элемент, на который ссылается ссылка
-//     const target = document.querySelector(link.getAttribute('href'));
-
-//     // Вычисляем расстояние до целевого элемента от начала страницы
-//     const distance = target.getBoundingClientRect().top;
-
-//     // Плавно прокручиваем страницу к целевому элементу
-//     window.scroll({
-//       top: distance,
-//       left: 0,
-//       behavior: 'smooth'
-//     });
-//   });
-// });
-
 // ========================================================  project  ============================================================
 
 const weatherApp = async (id) => {
@@ -125,3 +101,19 @@ const headerLinks = document.querySelectorAll('.header__link[data-goto]');
 headerLinks.forEach(link => {
   link.addEventListener('click', onHeaderLinkClick);
 })
+
+
+// ========================================================  progress bar  ============================================================
+
+
+const progressStage = document.querySelector('.header__progress-stage');
+
+const getProgressStage = () => {
+  let fullHeight = document.body.scrollHeight;
+  let innerHeight = window.innerHeight;
+  progressStage.style.width = `${scrollY / (fullHeight - innerHeight) * 100}%`;
+}
+
+window.addEventListener('scroll', getProgressStage);
+window.addEventListener('resize', getProgressStage);
+
