@@ -9,6 +9,10 @@ body {
     background-color: #fff;
 }
 
+body._scroll-lock {
+    overflow: hidden;
+}
+
 p {
     margin: 0;
 }

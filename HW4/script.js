@@ -71,30 +71,53 @@ buttons.forEach(button => {
 });
 
 
+// ========================================================  burger menu  ============================================================
+
+
+const iconBurgerMenu = document.querySelector('.header__burger-menu-icon');
+const headerNavMenu = document.querySelector('.header__nav');
+
+const onClickIconBurger = () => {
+  document.body.classList.toggle('_scroll-lock');
+  iconBurgerMenu.classList.toggle('_active');
+  headerNavMenu.classList.toggle('_active');
+}
+
+if (iconBurgerMenu) {
+  iconBurgerMenu.addEventListener('click', onClickIconBurger);
+}
+
+
 // ========================================================  smooth page scrolling  ============================================================
 
 
 const onHeaderLinkClick = (e) => {
-const link = e.target;
-  if(!link.dataset.goto || !document.querySelector(link.dataset.goto)) return false;
-    e.preventDefault();
+  const link = e.target;
+  if (!link.dataset.goto || !document.querySelector(link.dataset.goto)) return false;
+  e.preventDefault();
 
-    if(link.dataset.goto === '#header') {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-      return true;
-    }
+  if (iconBurgerMenu.classList.contains('_active')) {  // close burger menu and nav header when link is clicked
+    document.body.classList.remove('_scroll-lock');
+    iconBurgerMenu.classList.remove('_active');
+    headerNavMenu.classList.remove('_active');
+  }
 
-    const target = document.querySelector(link.dataset.goto);
-    const distance = target.getBoundingClientRect().top + scrollY - document.querySelector('.header').offsetHeight;
+  if (link.dataset.goto === '#header') {
     window.scroll({
-            top: distance,
-            left: 0,
-            behavior: 'smooth'
-          });
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+    return true;
+  }
+
+  const target = document.querySelector(link.dataset.goto);
+  const distance = target.getBoundingClientRect().top + scrollY - document.querySelector('.header').offsetHeight;
+  window.scroll({
+    top: distance,
+    left: 0,
+    behavior: 'smooth'
+  });
 }
 
 const headerLinks = document.querySelectorAll('.header__link[data-goto]');
@@ -102,6 +125,3 @@ const headerLinks = document.querySelectorAll('.header__link[data-goto]');
 headerLinks.forEach(link => {
   link.addEventListener('click', onHeaderLinkClick);
 })
-
-
-// ========================================================  burger menu  ============================================================
