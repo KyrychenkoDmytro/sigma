@@ -27,7 +27,6 @@
 const weatherApp = async (id) => {
   const apiKey = '9352c45d2abfb10662000937a603691d';
   const url = `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${apiKey}`;
-  // const imgUrl = 'https://openweathermap.org/img/wn/10d@2x.png';
 
   const title = document.querySelector('.project__title');
   const cityImg = document.querySelector('.project__image img');
@@ -41,7 +40,6 @@ const weatherApp = async (id) => {
 
   const response = await fetch(url);
   const data = await response.json();
-  // console.log(data);
 
   title.textContent = `Weather in the ${data.name}`;
   cityImg.setAttribute('src', `./assets/img/${id}.jpg`);
@@ -56,8 +54,6 @@ const weatherApp = async (id) => {
 
 weatherApp(706483); // Kharkiv city id by default
 
-const buttons = document.querySelectorAll('.project__app-btn[data-cityid]');
-
 const buttonHandler = function (e) {
   buttons.forEach(button => {
     button.classList.remove('project__app-btn_active');
@@ -68,6 +64,44 @@ const buttonHandler = function (e) {
   weatherApp(dataset);
 }
 
+const buttons = document.querySelectorAll('.project__app-btn[data-cityid]');
+
 buttons.forEach(button => {
   button.addEventListener('click', buttonHandler)
 });
+
+
+// ========================================================  smooth page scrolling  ============================================================
+
+
+const onHeaderLinkClick = (e) => {
+const link = e.target;
+  if(!link.dataset.goto || !document.querySelector(link.dataset.goto)) return false;
+    e.preventDefault();
+
+    if(link.dataset.goto === '#header') {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+      return true;
+    }
+
+    const target = document.querySelector(link.dataset.goto);
+    const distance = target.getBoundingClientRect().top + scrollY - document.querySelector('.header').offsetHeight;
+    window.scroll({
+            top: distance,
+            left: 0,
+            behavior: 'smooth'
+          });
+}
+
+const headerLinks = document.querySelectorAll('.header__link[data-goto]');
+
+headerLinks.forEach(link => {
+  link.addEventListener('click', onHeaderLinkClick);
+})
+
+
+// ========================================================  burger menu  ============================================================

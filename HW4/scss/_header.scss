@@ -29,26 +29,24 @@
             display: flex;
             gap: 16px;
             margin: 0;
+        }
+    }
 
-            li {
-                a {
-                    display: block;
-                    height: inherit;
-                    padding: 8px 16px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: $color-black;
-                    text-transform: uppercase;
-                    border: 5px solid transparent;
-                    border-radius: 20px;
-                    transition: all .3s ease;
+    &__link {
+        display: block;
+        height: inherit;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-black;
+        text-transform: uppercase;
+        border: 5px solid transparent;
+        border-radius: 20px;
+        transition: all .3s ease;
 
-                    &:hover {
-                        color: $color-green;
-                        border: 5px solid $color-green;
-                    }
-                }
-            }
+        &:hover {
+            color: $color-green;
+            border: 5px solid $color-green;
         }
     }
 
@@ -59,7 +57,6 @@
         background-color: $color-cream;
         color: #fff;
         margin-left: 60px;
-        // margin-right: 14px;
         font-size: 16px;
         font-weight: 600;
         transition: transform .3s ease;
@@ -111,13 +108,13 @@
                 justify-content: space-between;
 
                 li:first-child {
-                    a {
+                    a.header__link {
                         margin-left: -20px;
                     }
                 }
 
                 li:last-child {
-                    a {
+                    a.header__link {
                         margin-right: -20px;
                     }
                 }
@@ -134,18 +131,19 @@
                 gap: 10px;
 
                 li {
-                    a {
+                    a.header__link {
                         padding: 8px 12px;
                     }
                 }
+
                 li:first-child {
-                    a {
+                    a.header__link {
                         margin-left: -16px;
                     }
                 }
 
                 li:last-child {
-                    a {
+                    a.header__link {
                         margin-right: -16px;
                     }
                 }

@@ -145,7 +145,7 @@ select {
   gap: 16px;
   margin: 0;
 }
-.header__nav ul li a {
+.header__link {
   display: block;
   height: inherit;
   padding: 8px 16px;
@@ -158,7 +158,7 @@ select {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.header__nav ul li a:hover {
+.header__link:hover {
   color: #37806B;
   border: 5px solid #37806B;
 }
@@ -220,10 +220,10 @@ select {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .header__nav ul li:first-child a {
+  .header__nav ul li:first-child a.header__link {
     margin-left: -20px;
   }
-  .header__nav ul li:last-child a {
+  .header__nav ul li:last-child a.header__link {
     margin-right: -20px;
   }
 }
@@ -231,13 +231,13 @@ select {
   .header__nav ul {
     gap: 10px;
   }
-  .header__nav ul li a {
+  .header__nav ul li a.header__link {
     padding: 8px 12px;
   }
-  .header__nav ul li:first-child a {
+  .header__nav ul li:first-child a.header__link {
     margin-left: -16px;
   }
-  .header__nav ul li:last-child a {
+  .header__nav ul li:last-child a.header__link {
     margin-right: -16px;
   }
 }
