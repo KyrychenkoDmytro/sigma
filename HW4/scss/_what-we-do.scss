@@ -68,20 +68,20 @@
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
     }
 
-    &__info-block:nth-child(2) {
-        background-color: $color-cream;
+    // &__info-block:nth-child(2) {
+    //     background-color: $color-cream;
 
-        .what-we-do__info-text {
-            h4 {
-                color: #fff;
-            }
+    //     .what-we-do__info-text {
+    //         h4 {
+    //             color: #fff;
+    //         }
 
-            p {
-                color: #fff;
-            }
-        }
+    //         p {
+    //             color: #fff;
+    //         }
+    //     }
 
-    }
+    // }
 
     &__info-text {
         h4 {
@@ -101,10 +101,6 @@
         &__title {
             font-size: 42px;
             line-height: 54px;
-        }
-
-        &__info-block:last-child {
-            margin: 0 auto;
         }
     }
 

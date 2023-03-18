@@ -731,15 +731,6 @@ select {
   -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
 }
-.what-we-do__info-block:nth-child(2) {
-  background-color: #CAA892;
-}
-.what-we-do__info-block:nth-child(2) .what-we-do__info-text h4 {
-  color: #fff;
-}
-.what-we-do__info-block:nth-child(2) .what-we-do__info-text p {
-  color: #fff;
-}
 .what-we-do__info-text h4 {
   font-size: 24px;
   font-weight: 700;
@@ -753,9 +744,6 @@ select {
   .what-we-do__title {
     font-size: 42px;
     line-height: 54px;
-  }
-  .what-we-do__info-block:last-child {
-    margin: 0 auto;
   }
 }
 @media (max-width: 1199.98px) {

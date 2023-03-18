@@ -41,7 +41,6 @@ const buttonHandler = function (e) {
 }
 
 const buttons = document.querySelectorAll('.project__app-btn[data-cityid]');
-
 buttons.forEach(button => {
   button.addEventListener('click', buttonHandler)
 });
@@ -71,8 +70,9 @@ const onHeaderLinkClick = (e) => {
   const link = e.target;
   if (!link.dataset.goto || !document.querySelector(link.dataset.goto)) return false;
   e.preventDefault();
-
-  if (iconBurgerMenu.classList.contains('_active')) {  // close burger menu and nav header when link is clicked
+  
+ // close burger menu and nav header when link is clicked
+  if (iconBurgerMenu.classList.contains('_active')) { 
     document.body.classList.remove('_scroll-lock');
     iconBurgerMenu.classList.remove('_active');
     headerNavMenu.classList.remove('_active');
@@ -111,9 +111,109 @@ const progressStage = document.querySelector('.header__progress-stage');
 const getProgressStage = () => {
   let fullHeight = document.body.scrollHeight;
   let innerHeight = window.innerHeight;
-  progressStage.style.width = `${scrollY / (fullHeight - innerHeight) * 100}%`;
+  progressStage.style.width = `${scrollY / (fullHeight - innerHeight) * 100}%`; 
 }
 
 window.addEventListener('scroll', getProgressStage);
 window.addEventListener('resize', getProgressStage);
 
+
+// ========================================================  what we do  ============================================================
+
+const resourcesUrl = ['posts/', 'comments/', 'users/'];
+const url = 'https://jsonplaceholder.typicode.com/';
+
+//I make a request to the server to receive an array of data or 1 object
+const getData = async (resourse, count = '') => {
+  const response = await fetch(url + resourse + count);
+  const data = await response.json();
+  console.log(data);
+  return data;
+}
+// I create a block with a picture, title and text. and change the text color and background of every second page.
+const createElementsFromData = async (imgNumber, resourse, count) => {
+  let data = await getData(resourse, count);
+  if (count === 1) data = [data];
+  if (data.length > 5) data.length = 5;
+  if (imgNumber % 2) {
+    for (let item of data) {
+      const wrap = document.querySelector('.what-we-do__wrap-info');
+      const block = document.createElement('div');
+      block.classList.add('what-we-do__info-block');
+      const wrapImg = document.createElement('div');
+      wrapImg.classList.add('what-we-do__info-img');
+      const img = document.createElement('img');
+      img.src = `./assets/img/icons/what-we-do-${imgNumber}.svg`;
+      wrapImg.append(img);
+      block.append(wrapImg);
+      const wrapText = document.createElement('div');
+      wrapText.classList.add('what-we-do__info-text');
+      const title = document.createElement('h4');
+      title.textContent = item?.name || item?.title;
+      const text = document.createElement('p');
+      text.textContent = item?.body || item?.email;
+      block.style.backgroundColor = '#CAA892';   // change bgc and color
+      title.style.color = '#fff';
+      text.style.color = '#fff';
+      wrapText.append(title);
+      wrapText.append(text);
+      block.append(wrapText);
+      wrap.append(block);
+    }
+  } else {
+    for (let item of data) {
+      const wrap = document.querySelector('.what-we-do__wrap-info');
+      const block = document.createElement('div');
+      block.classList.add('what-we-do__info-block');
+      const wrapImg = document.createElement('div');
+      wrapImg.classList.add('what-we-do__info-img');
+      const img = document.createElement('img');
+      img.src = `./assets/img/icons/what-we-do-${imgNumber}.svg`;
+      wrapImg.append(img);
+      block.append(wrapImg);
+      const wrapText = document.createElement('div');
+      wrapText.classList.add('what-we-do__info-text');
+      const title = document.createElement('h4');
+      title.textContent = item?.name || item?.title;
+      const text = document.createElement('p');
+      text.textContent = item?.body || item?.email;
+      wrapText.append(title);
+      wrapText.append(text);
+      block.append(wrapText);
+      wrap.append(block);
+    }
+  }
+}
+
+const whatWeDoButtons = document.querySelectorAll('.what-we-do__btn[data-resource]');
+
+// change border and make a query on an array "resourcesUrl" element using the date attribute in the button.
+const whatWeDoButtonClick = (e) => {  
+  whatWeDoButtons.forEach(button => {
+    button.classList.remove('what-we-do__btn_active');
+  })
+  const wrap = document.querySelector('.what-we-do__wrap-info');
+  wrap.innerHTML = '';
+  const target = e.target;
+  target.classList.add('what-we-do__btn_active');
+  const dataset = target.dataset.resource;
+  if (dataset === 'all') {
+    resourcesUrl.forEach((resourse, i) => {
+      createElementsFromData(i, resourse, 1)
+    })
+  } else {
+    createElementsFromData(dataset, resourcesUrl[dataset]);
+  }
+}
+
+whatWeDoButtons.forEach(button => {
+  button.addEventListener('click', whatWeDoButtonClick);
+})
+
+const createElementsDefault = () => {
+  resourcesUrl.forEach((resourse, i) => {
+    createElementsFromData(i, resourse, 1)
+  })
+}
+
+createElementsDefault(); // by default
