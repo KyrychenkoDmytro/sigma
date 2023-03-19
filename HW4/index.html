@@ -16,7 +16,8 @@
         <div class="loader__element"></div>
         <div class="loader__element"></div>
         <div class="loader__element"></div>
-      </div>
+        <h2 class="discont-animation-name"></h2>
+    </div>
     <div class="wrapper">
         <header id="header" class="header">
             <div class="header__progress-bar">
@@ -250,9 +251,14 @@
                             with
                             our
                             newsletter.</p>
+                            <div id="first-name-error" class="sign-up__name-error"></div>
+                            <div id="last-name-error" class="sign-up__last-name-error"></div>
+                            <div id="email-error" class="sign-up__email-error"></div>
                         <form class="form sign-up__form" id="form">
+                            
                             <input type="text" class="sign-up__input sign-up__input_name" id="first-name"
                                 name="first-name" placeholder="Enter your name....." required>
+                            
                             <input type="text" class="sign-up__input sign-up__input_last-name" id="last-name"
                                 name="last-name" placeholder="Enter your surname....." required>
                             <input type="email" class="sign-up__input sign-up__input_email" id="email" name="email"

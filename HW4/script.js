@@ -285,7 +285,7 @@ const animateSections = () => {
     Math.round(sectionPosition.bottom - headerHeight) <= window.innerHeight
   ) {
     if (!localStorage.getItem('blogAnimation')) { // animation does not work again when the section is in the scope when scrolling
-      localStorage.setItem('blogAnimation', true); 
+      localStorage.setItem('blogAnimation', true);
       section.classList.add('blog_animation');
       section.addEventListener("animationend", () => {
         section.classList.remove('blog_animation');
@@ -298,3 +298,73 @@ const animateSections = () => {
 }
 
 window.addEventListener("scroll", animateSections);
+
+
+// ========================================================  validate form (section sign up)  ============================================================
+
+
+const form = document.getElementById('form');
+localStorage.setItem('myName', 'Dmytro'); // my name
+
+const checkIsThisYourName = () => {
+  if (localStorage.getItem('firstName') !== localStorage.getItem('myName')) return false;
+
+  let loader = document.querySelector('.loader');
+  if (localStorage.getItem('discontAnimation')) {
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const year = today.getFullYear();
+    const currentDate = `${day}.${month}.${year} `;
+    const textToDiscont = `=>>>>>>> only today 120% discount for users with the name ${localStorage.getItem('firstName')} when placing an order`
+
+    let discontText = document.querySelector('.discont-animation-name');
+    discontText.textContent = currentDate + textToDiscont;
+
+    document.body.classList.add('_scroll-lock');
+    loader.classList.remove('loader_none');
+    setTimeout(() => {
+      loader.classList.add('loader_none');
+      document.body.classList.remove('_scroll-lock');
+      localStorage.setItem('discontAnimation', false);
+      localStorage.removeItem('firstName');
+    }, 5000)
+  }
+}
+
+form.addEventListener('submit', function (event) {
+  let firstName = document.getElementById('first-name').value;
+  let lastName = document.getElementById('last-name').value;
+  let email = document.getElementById('email').value;
+  let nameRegExp = /^[A-Z][a-z]*$/;
+  let emailRegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+  if (!nameRegExp.test(firstName)) {
+    event.preventDefault();
+    let firstNameError = document.getElementById('first-name-error');
+    firstNameError.textContent = 'The name must consist of Latin letters and begin with a capital letter';
+    form.style.border = '3px solid red';
+  }
+
+  if (!nameRegExp.test(lastName)) {
+    event.preventDefault();
+    let lastNameError = document.getElementById('first-name-error');
+    lastNameError.textContent = 'The last name must consist of Latin letters and begin with a capital letter';
+    form.style.border = '3px solid red';
+  }
+
+  if (!emailRegExp.test(email)) {
+    event.preventDefault();
+    let emailError = document.getElementById('email-error');
+    emailError.textContent = 'Please enter a valid email address';
+    form.style.border = '3px solid red';
+  }
+
+  localStorage.setItem('firstName', firstName);
+  localStorage.setItem('lastName', lastName);
+  localStorage.setItem('email', email);
+
+  localStorage.setItem('discontAnimation', true);
+});
+
+checkIsThisYourName();

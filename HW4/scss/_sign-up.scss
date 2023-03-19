@@ -1,6 +1,7 @@
 .sign-up {
     position: relative;
     padding: 90px 0;
+
     &::before {
         content:
             " . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .\A  . . . . . . . . . . . . . . . . . . .";
@@ -48,10 +49,23 @@
         line-height: 28px;
     }
 
+    &__name-error,
+    &__last-name-error,
+    &__email-error {
+        text-align: center;
+        font-size: 24px;
+        line-height: 40px;
+        color: red;
+    }
+
     &__form {
         display: flex;
         flex-wrap: wrap;
+        padding: 30px;
+        border-radius: 50px 0;
         gap: 60px 12%;
+        border: 3px solid transparent;
+        transition: border .4s ease;
     }
 
     &__input {
@@ -89,6 +103,7 @@
 
         &__title {
             font-size: 42px;
+
             &::after {
                 width: 45%;
             }
@@ -101,6 +116,7 @@
 
         &__title {
             font-size: 36px;
+
             &::after {
                 width: 38%;
             }
@@ -113,6 +129,7 @@
 
         &__title {
             font-size: 29px;
+
             &::after {
                 width: 34%;
             }
