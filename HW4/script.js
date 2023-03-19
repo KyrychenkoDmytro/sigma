@@ -228,9 +228,47 @@ window.addEventListener('load', function () {
     loader.classList.remove('loader_none');  // activate the animation
     setTimeout(() => {
       loader.classList.add('loader_none');
-      document.body.classList.remove('_scroll-lock'); 
+      document.body.classList.remove('_scroll-lock');
       sessionStorage.setItem('isPageLoaded', true);
     }, 5000)
   }
 
 });
+
+
+// ========================================================  if the user is absent for 1 minute  ============================================================
+
+
+const areYouHere = () => {
+  let timeout = setTimeout(() => {
+    console.log('window close');
+    window.close();
+  }, 30 * 1000); // 30 sec
+
+  let result = confirm("Are you still here?");
+
+
+  if (result) {
+    clearTimeout(timeout);
+  } else {
+    console.log('window close');
+    window.close();
+  }
+}
+
+let timer;
+document.addEventListener("mousemove", () => {
+  clearTimeout(timer);
+  timer = setTimeout(areYouHere, 60 * 1000); // 60 sec
+});
+
+window.addEventListener("scroll", () => {
+  clearTimeout(timer);
+  timer = setTimeout(areYouHere, 60 * 1000);
+});
+
+document.addEventListener("keypress", () =>{
+  clearTimeout(timer);
+  timer = setTimeout(areYouHere, 60 * 1000);
+});
+
