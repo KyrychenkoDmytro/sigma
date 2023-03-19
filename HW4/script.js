@@ -70,9 +70,9 @@ const onHeaderLinkClick = (e) => {
   const link = e.target;
   if (!link.dataset.goto || !document.querySelector(link.dataset.goto)) return false;
   e.preventDefault();
-  
- // close burger menu and nav header when link is clicked
-  if (iconBurgerMenu.classList.contains('_active')) { 
+
+  // close burger menu and nav header when link is clicked
+  if (iconBurgerMenu.classList.contains('_active')) {
     document.body.classList.remove('_scroll-lock');
     iconBurgerMenu.classList.remove('_active');
     headerNavMenu.classList.remove('_active');
@@ -111,7 +111,7 @@ const progressStage = document.querySelector('.header__progress-stage');
 const getProgressStage = () => {
   let fullHeight = document.body.scrollHeight;
   let innerHeight = window.innerHeight;
-  progressStage.style.width = `${scrollY / (fullHeight - innerHeight) * 100}%`; 
+  progressStage.style.width = `${scrollY / (fullHeight - innerHeight) * 100}%`;
 }
 
 window.addEventListener('scroll', getProgressStage);
@@ -127,7 +127,6 @@ const url = 'https://jsonplaceholder.typicode.com/';
 const getData = async (resourse, count = '') => {
   const response = await fetch(url + resourse + count);
   const data = await response.json();
-  console.log(data);
   return data;
 }
 // I create a block with a picture, title and text. and change the text color and background of every second page.
@@ -188,7 +187,7 @@ const createElementsFromData = async (imgNumber, resourse, count) => {
 const whatWeDoButtons = document.querySelectorAll('.what-we-do__btn[data-resource]');
 
 // change border and make a query on an array "resourcesUrl" element using the date attribute in the button.
-const whatWeDoButtonClick = (e) => {  
+const whatWeDoButtonClick = (e) => {
   whatWeDoButtons.forEach(button => {
     button.classList.remove('what-we-do__btn_active');
   })
@@ -217,3 +216,21 @@ const createElementsDefault = () => {
 }
 
 createElementsDefault(); // by default
+
+
+// ========================================================  preloader animation  ============================================================
+
+
+window.addEventListener('load', function () {
+  let loader = document.querySelector('.loader');
+  if (!sessionStorage.getItem('isPageLoaded')) {  // the second time the animation doesn't work
+    document.body.classList.add('_scroll-lock'); // disable page scrolling
+    loader.classList.remove('loader_none');  // activate the animation
+    setTimeout(() => {
+      loader.classList.add('loader_none');
+      document.body.classList.remove('_scroll-lock'); 
+      sessionStorage.setItem('isPageLoaded', true);
+    }, 5000)
+  }
+
+});
