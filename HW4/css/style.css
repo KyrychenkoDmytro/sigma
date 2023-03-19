@@ -1458,6 +1458,15 @@ select {
   padding: 100px 0;
   background-color: #F8F8F8;
 }
+.blog_animation {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-animation: visible 3s linear;
+          animation: visible 3s linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
 .blog::after {
   content: " . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .\a  . . . .      .. .. .. . . . . . . . . .";
   height: 150px;
@@ -1496,6 +1505,10 @@ select {
       -ms-flex: 0 1 41%;
           flex: 0 1 41%;
 }
+.blog__wrap-design:hover .blog__design-image img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 .blog__design-image {
   position: relative;
   top: 34px;
@@ -1518,6 +1531,10 @@ select {
   -o-object-position: center top;
      object-position: center top;
   border-radius: 100px 0px;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 .blog__design-title {
   font-weight: 600;
@@ -1537,6 +1554,29 @@ select {
   font-size: 18px;
 }
 
+@-webkit-keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 1639.98px) {
   .blog__design-title {
     height: 66px;

@@ -239,36 +239,62 @@ window.addEventListener('load', function () {
 // ========================================================  if the user is absent for 1 minute  ============================================================
 
 
-const areYouHere = () => {
-  let timeout = setTimeout(() => {
-    console.log('window close');
-    window.close();
-  }, 30 * 1000); // 30 sec
+// const areYouHere = () => {
+//   let timeout = setTimeout(() => {
+//     console.log('window close');
+//     window.close();
+//   }, 30 * 1000); // 30 sec
 
-  let result = confirm("Are you still here?");
+//   let result = confirm("Are you still here?");
 
 
-  if (result) {
-    clearTimeout(timeout);
+//   if (result) {
+//     clearTimeout(timeout);
+//   } else {
+//     console.log('window close');
+//     window.close();
+//   }
+// }
+
+// let timer;
+// document.addEventListener("mousemove", () => {
+//   clearTimeout(timer);
+//   timer = setTimeout(areYouHere, 60 * 1000); // 60 sec
+// });
+
+// window.addEventListener("scroll", () => {
+//   clearTimeout(timer);
+//   timer = setTimeout(areYouHere, 60 * 1000);
+// });
+
+// document.addEventListener("keypress", () =>{
+//   clearTimeout(timer);
+//   timer = setTimeout(areYouHere, 60 * 1000);
+// });
+
+
+// ========================================================  animation LatestNews(Blog)  ============================================================
+
+
+const animateSections = () => {
+  const section = document.querySelector('.blog ')
+  const sectionPosition = section.getBoundingClientRect();
+  const headerHeight = document.querySelector('.header').offsetHeight;
+  if (
+    Math.round(sectionPosition.top - headerHeight) >= 0 &&
+    Math.round(sectionPosition.bottom - headerHeight) <= window.innerHeight
+  ) {
+    if (!localStorage.getItem('blogAnimation')) { // animation does not work again when the section is in the scope when scrolling
+      localStorage.setItem('blogAnimation', true); 
+      section.classList.add('blog_animation');
+      section.addEventListener("animationend", () => {
+        section.classList.remove('blog_animation');
+      }, { once: true });
+    }
   } else {
-    console.log('window close');
-    window.close();
+    localStorage.removeItem('blogAnimation'); // remove item when user goes out of section
+    section.classList.remove('blog_animation');
   }
 }
 
-let timer;
-document.addEventListener("mousemove", () => {
-  clearTimeout(timer);
-  timer = setTimeout(areYouHere, 60 * 1000); // 60 sec
-});
-
-window.addEventListener("scroll", () => {
-  clearTimeout(timer);
-  timer = setTimeout(areYouHere, 60 * 1000);
-});
-
-document.addEventListener("keypress", () =>{
-  clearTimeout(timer);
-  timer = setTimeout(areYouHere, 60 * 1000);
-});
-
+window.addEventListener("scroll", animateSections);

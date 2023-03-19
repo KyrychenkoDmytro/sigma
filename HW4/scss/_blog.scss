@@ -3,6 +3,13 @@
     padding: 100px 0;
     background-color: #F8F8F8;
 
+    &_animation {
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        animation: visible 3s linear;
+        animation-iteration-count: 1;
+    }
+
     &::after {
         content:
             " . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .\A  . . . .      .. .. .. . . . . . . . . .";
@@ -38,6 +45,14 @@
     &__wrap-design {
         position: relative;
         flex: 0 1 41%;
+
+        &:hover {
+            .blog__design-image {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
     }
 
     &__design-image {
@@ -60,6 +75,7 @@
             object-fit: cover;
             object-position: center top;
             border-radius: 100px 0px;
+            transition: transform .4s ease;
         }
     }
 
@@ -83,6 +99,20 @@
         font-size: 18px;
     }
 
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (max-width:1639.98px) {
@@ -163,7 +193,7 @@
         }
 
         &__design-text {
-           text-align: center;
+            text-align: center;
         }
 
         &__btn {
