@@ -1,10 +1,14 @@
 import './App.scss';
+import Header from '../Containers/Header/Header';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <h1>sadasdasd</h1>
-      <button className='btn'>dfgdfg</button>
+      <Header />
+      <Routes>
+        <Route path='#'/>
+      </Routes>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+@import '../../scss/variables';
+
+.Nav {
+    flex: 0 1 586px;
+    margin: 0 auto;
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 26px;
+
+        li {
+            a {
+                padding: 8px 12px;
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 700;
+                font-family: 'Roboto', sans-serif;
+                color: $darkSlateGray;
+            }
+        }
+    }
+}

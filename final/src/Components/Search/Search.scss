@@ -1,0 +1,48 @@
+@import '../../scss/variables';
+
+.Search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex: 0 1 380px;
+    height: 66px;
+    padding: 5px 6px 5px 15px;
+    border-radius: 36px;
+    background-color: #FAFAFA;
+
+    &__input {
+        display: block;
+        height: 100%;
+        flex: 0 0 80%;
+        border-radius: 36px 0 0 36px;
+        background-color: #FAFAFA;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        line-height: 26px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: $darkSlateGray;
+    }
+
+    &__button {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $darkSeaGreen;
+        border: none;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 22px;
+            background: no-repeat center center url(../../../public/img/icons/search-loupe.svg);
+        }
+    }
+}

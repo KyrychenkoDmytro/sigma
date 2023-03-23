@@ -1,0 +1,13 @@
+.Header {
+    padding: 70px 0;
+
+    &__wrap {
+        max-width: 1680px;
+        padding: 0 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+}
