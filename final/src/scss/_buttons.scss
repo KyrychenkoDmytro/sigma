@@ -1,0 +1,14 @@
+.btn {
+    @extend %btn;
+
+    &::after {
+        content: "";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background: no-repeat center center url(../../public/img/icons/btn-arrow.svg) #335B6B;
+    }
+}
