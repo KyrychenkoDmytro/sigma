@@ -10,5 +10,11 @@
         height: 19px;
         border-radius: 50%;
         background: no-repeat center center url(../../public/img/icons/btn-arrow.svg) #335B6B;
+        cursor: pointer;
     }
+}
+
+.btn_khaki {
+    background-color: $khaki;
+    color: $darkSlateGray;
 }

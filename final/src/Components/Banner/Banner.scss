@@ -1,0 +1,22 @@
+.Banner {
+    position: relative;
+    width: 100%;
+    height: 898px;
+    background: url(../../../public/img/Banner-bg.png) no-repeat center center / cover,
+        url(../../../public/img/Banner-bg2.jpg)no-repeat center center / cover;
+
+    &__wrap {
+        height: 898px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__title-label {
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+}

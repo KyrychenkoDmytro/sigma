@@ -17,6 +17,21 @@ body {
 .container {
   max-width: 1440px;
   padding: 0 20px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 800;
+  font-family: 'Roboto', sans-serif;
+  color: $darkSlateGray;
+}
+
+.title-label {
+  font-size: 36px;
+  line-height: 49px;
+  font-weight: 400;
+  font-family: 'Yellowtail', cursive;
+  color: $darkSeaGreen;
 }
 
 h1 {
