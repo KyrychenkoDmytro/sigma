@@ -36,6 +36,7 @@
         background-color: $darkSeaGreen;
         border: none;
         cursor: pointer;
+        @include noselect();
 
         &::after {
             content: "";

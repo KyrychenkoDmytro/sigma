@@ -20,6 +20,7 @@
         background-color: $darkSlateGray;
         border: none;
         cursor: pointer;
+        @include noselect();
 
         &::after {
             content: "";

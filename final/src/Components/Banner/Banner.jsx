@@ -5,7 +5,7 @@ const Banner = () => {
         <section className="Banner">
             <div className="container">
                 <div className="Banner__wrap">
-                    <div className="Banner__info">
+                    <div className="Banner__block">
                         <div className='title-label Banner__title-label'>100% Natural Food</div>
                         <h1 className="title Banner__title">
                             Choose the best<br />
