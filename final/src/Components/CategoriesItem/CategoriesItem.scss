@@ -1,0 +1,62 @@
+@import '../../scss/variables';
+
+.CategoriesItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 335px;
+    min-height: 483px;
+    padding: 30px;
+    border-radius: 30px;
+    background: url(../../../public/img/categories/broccoli.jpg) no-repeat center center / cover;
+
+    &__name {
+        padding: 6px 12px;
+        border-radius: 8px;
+        background-color: $darkSlateGray;
+        color: #fff;
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 600;
+        margin-bottom: auto;
+    }
+
+    &__product-name {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 48px;
+        font-weight: 600;
+        border-bottom: 1px solid #DEDDDD;
+    }
+
+    &__product-info {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__old-price {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #B8B8B8;
+        text-decoration: line-through;
+    }
+
+    &__new-price {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 700;
+        color: $darkSlateGray;
+    }
+
+    &__rating {
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: -4px;
+        margin-left: auto;
+    }
+}
