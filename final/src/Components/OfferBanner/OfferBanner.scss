@@ -1,0 +1,34 @@
+.OfferBanner {
+    padding: 150px 0;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__block {
+        flex: 0 1 680px;
+        height: 367px;
+        padding: 55px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__block:first-child {
+        background: url(../../../public/img/OfferBanner1.jpg) no-repeat center center / cover;
+
+        .OfferBanner__title-label,
+        .OfferBanner__title {
+            color: #fff;
+        }
+    }
+
+    &__block:last-child {
+        background: url(../../../public/img/OfferBanner2.jpg) no-repeat center center / cover;
+    }
+}
