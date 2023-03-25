@@ -4,6 +4,7 @@ import OfferBanner from '../../Components/OfferBanner/OfferBanner';
 import AboutUs from '../../Components/AboutUs/AboutUs';
 import Categories from '../../Containers/Categories/Categories';
 import Testimonial from '../../Components/Testimonial/Testimonial';
+import Offer from '../../Components/Offer/Offer';
 
 const Home = () => {
     return (
@@ -12,7 +13,8 @@ const Home = () => {
             {/* <OfferBanner /> */}
             {/* <AboutUs /> */}
             {/* <Categories /> */}
-            <Testimonial />
+            {/* <Testimonial /> */}
+            <Offer />
         </main>
     );
 }

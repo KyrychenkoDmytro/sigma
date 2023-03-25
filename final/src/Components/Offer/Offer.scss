@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+
+.Offer {
+    padding: 200px 0;
+    background-color: $darkSlateGray;
+
+    &__title-label {
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        color: #fff;
+    }
+
+    &__wrap-items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
