@@ -8,7 +8,7 @@
     min-height: 483px;
     padding: 30px;
     border-radius: 30px;
-    background: url(../../../public/img/categories/broccoli.jpg) no-repeat center center / cover;
+    background-color: #F9F8F8;
 
     &__name {
         padding: 6px 12px;
@@ -19,6 +19,13 @@
         line-height: 21px;
         font-weight: 600;
         margin-bottom: auto;
+    }
+
+    &__img {
+        width: 100%;
+        height: 324px;
+        background: #F9F8F8 url(../../../public/img/categories/broccoli.png) no-repeat center center / cover;
+        background-blend-mode: multiply;
     }
 
     &__product-name {

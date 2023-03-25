@@ -1,6 +1,8 @@
+@import '../../scss/variables';
+
 .AboutUs {
     width: 100%;
-    background: url(../../../public/img/AboutUs-bg.jpg) no-repeat center center / cover;
+    background: $snow url(../../../public/img/AboutUs-bg.jpg) no-repeat center center / contain;
 
     &__wrap {
         height: 1067px;
