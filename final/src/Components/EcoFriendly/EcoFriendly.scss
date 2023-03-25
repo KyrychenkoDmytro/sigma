@@ -1,0 +1,38 @@
+.EcoFriendly {
+    min-height: 931px;
+    padding: 104px 0;
+    background: #fff url(../../../public/img/EcoFriendly-bg.jpg) no-repeat left center /contain;
+
+    &__wrap {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__block {
+        flex: 0 1 56%;
+        min-height: 723px;
+        padding: 78px 90px;
+        border-radius: 30px;
+        background-color: #fff;
+    }
+
+    &__title-label {
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    &__advantages {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 35px;
+    }
+
+    &__advantages-title {
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+}
