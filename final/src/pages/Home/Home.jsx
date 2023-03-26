@@ -22,7 +22,7 @@ const Home = () => {
             {/* <EcoFriendly /> */}
             {/* <Gallery /> */}
             {/* <News /> */}
-            <Newsletter />
+            {/* <Newsletter /> */}
         </main>
     );
 }

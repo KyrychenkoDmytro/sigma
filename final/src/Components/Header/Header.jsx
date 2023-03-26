@@ -1,8 +1,8 @@
 import './Header.scss';
-import Logo from '../../Components/Logo/Logo';
-import Nav from '../../Components/Nav/Nav';
-import Search from '../../Components/Search/Search';
-import CartNavigate from '../../Components/CartNavigate/CartNavigate';
+import Logo from '../Logo/Logo';
+import Nav from '../Nav/Nav';
+import Search from '../Search/Search';
+import CartNavigate from '../CartNavigate/CartNavigate';
 
 
 const Header = () => {
