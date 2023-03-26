@@ -76,6 +76,7 @@ $dimGray : #525C60;
     gap: 10px;
     padding: 28px 39px;
     border-radius: 16px;
+    border: 2px solid transparent;
     border: none;
     cursor: pointer;
     @include noselect();

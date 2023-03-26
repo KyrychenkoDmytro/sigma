@@ -8,6 +8,7 @@ import Offer from '../../Components/Offer/Offer';
 import EcoFriendly from '../../Components/EcoFriendly/EcoFriendly';
 import Gallery from '../../Components/Gallery/Gallery';
 import News from '../../Components/News/News';
+import Newsletter from '../../Components/Newsletter/Newsletter';
 
 const Home = () => {
     return (
@@ -20,7 +21,8 @@ const Home = () => {
             {/* <Offer /> */}
             {/* <EcoFriendly /> */}
             {/* <Gallery /> */}
-            <News />
+            {/* <News /> */}
+            <Newsletter />
         </main>
     );
 }

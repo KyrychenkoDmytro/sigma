@@ -1,0 +1,50 @@
+@import '../../scss/variables';
+
+.Newsletter {
+    width: 100%;
+    padding: 102px 20px;
+    border-radius: 30px;
+    background: url(../../../public/img/Newsletter-bg.jpg) no-repeat center center / cover;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__title {
+        color: #fff;
+    }
+
+    &__form {
+        form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__input-mail {
+        width: 350px;
+        height: 80px;
+
+        input {
+            padding: 20px;
+            border-radius: 16px;
+            height: inherit;
+            width: inherit;
+            font-size: 18px;
+            line-height: 21px;
+            font-family: 'Roboto', sans-serif;
+            font-style: italic;
+            color: $darkSlateGray;
+            border: none;
+            outline: none;
+        }
+    }
+
+    &__Info-btn {
+        width: 220px;
+    }
+}

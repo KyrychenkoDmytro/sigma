@@ -1,6 +1,5 @@
 .btn {
     @extend %btn;
-    border: 2px solid transparent;
 
     &::after {
         content: "";
@@ -28,4 +27,14 @@
 .btn_white {
     background-color: #fff;
     border: 2px solid $darkSlateGray;
+}
+
+.btn_pagination-grey {
+    background-color: $darkSlateGray;
+    color: #fff;
+    padding: 28px 47px;
+
+    &::after {
+        content: none;
+    }
 }
