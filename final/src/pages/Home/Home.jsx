@@ -6,6 +6,7 @@ import Categories from '../../Containers/Categories/Categories';
 import Testimonial from '../../Components/Testimonial/Testimonial';
 import Offer from '../../Components/Offer/Offer';
 import EcoFriendly from '../../Components/EcoFriendly/EcoFriendly';
+import Gallery from '../../Components/Gallery/Gallery';
 
 const Home = () => {
     return (
@@ -16,7 +17,8 @@ const Home = () => {
             {/* <Categories /> */}
             {/* <Testimonial /> */}
             {/* <Offer /> */}
-            <EcoFriendly />
+            {/* <EcoFriendly /> */}
+            <Gallery />
         </main>
     );
 }
