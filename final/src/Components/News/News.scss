@@ -1,0 +1,95 @@
+.News {
+    padding: 180px 0 240px;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 48px;
+    }
+
+    &__title-label {
+        margin-bottom: 10px;
+    }
+
+    &__wrap-blogs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 46px;
+    }
+
+    &__blog {
+        padding: 43px 32px;
+        height: 524px;
+        border-radius: 30px;
+    }
+
+    &__blog:first-child {
+        background: url(../../../public/img/News-blog-bg1.jpg) no-repeat center center / cover;
+    }
+
+    &__blog:last-child {
+        background: url(../../../public/img/News-blog-bg2.jpg) no-repeat center center / cover;
+    }
+
+    &__blog-date {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 82px;
+        width: 82px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    &__date-day {
+        font-size: 25px;
+        line-height: 29px;
+        font-weight: 800;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    &__date-month {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 23px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    &__blog-info {
+        position: relative;
+        top: 137px;
+        width: 100%;
+        padding: 46px 57px 60px;
+        border-radius: 30px;
+        background-color: #fff;
+        box-shadow: 0px 20px 35px rgba(167, 167, 167, 0.25);
+    }
+
+    &__blog-author {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+
+        &::after {
+            content: url(../../../public/img/icons/news-block-avatar.svg);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__blog-title {
+        margin-bottom: 5px;
+    }
+
+    &__blog-text {
+        margin-bottom: 15px;
+    }
+}

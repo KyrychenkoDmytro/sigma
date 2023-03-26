@@ -7,6 +7,7 @@ import Testimonial from '../../Components/Testimonial/Testimonial';
 import Offer from '../../Components/Offer/Offer';
 import EcoFriendly from '../../Components/EcoFriendly/EcoFriendly';
 import Gallery from '../../Components/Gallery/Gallery';
+import News from '../../Components/News/News';
 
 const Home = () => {
     return (
@@ -18,7 +19,8 @@ const Home = () => {
             {/* <Testimonial /> */}
             {/* <Offer /> */}
             {/* <EcoFriendly /> */}
-            <Gallery />
+            {/* <Gallery /> */}
+            <News />
         </main>
     );
 }

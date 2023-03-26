@@ -1,5 +1,6 @@
 .btn {
     @extend %btn;
+    border: 2px solid transparent;
 
     &::after {
         content: "";
@@ -22,4 +23,9 @@
 .btn_gray {
     background-color: $darkSlateGray;
     color: #fff;
+}
+
+.btn_white {
+    background-color: #fff;
+    border: 2px solid $darkSlateGray;
 }
