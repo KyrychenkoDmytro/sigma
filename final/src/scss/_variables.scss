@@ -79,6 +79,7 @@ $cartOrderBg : rgba(253, 176, 45, 0.16);
     border-radius: 16px;
     border: 2px solid transparent;
     border: none;
+    outline: none;
     cursor: pointer;
     @include noselect();
 

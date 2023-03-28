@@ -74,5 +74,10 @@
         min-width: 220px;
         padding: 23px 57px;
         margin-top: 60px;
+        transition: background-color .3s ease;
+
+        &:focus {
+            background-color: $khaki;
+        }
     }
 }
