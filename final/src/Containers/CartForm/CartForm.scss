@@ -1,0 +1,78 @@
+@import '../../scss/variables';
+
+.CartForm {
+    padding: 20px 0;
+
+    &__wrap {
+
+        form {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px 4%;
+        }
+    }
+
+    &__full-name-wrap,
+    &__email-wrap,
+    &__address-wrap,
+    &__phone-wrap {
+        flex: 0 1 48%;
+    }
+
+    &__label {
+        margin-bottom: 26px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        color: $darkSlateGray;
+    }
+
+    &__input {
+        height: 80px;
+
+        input {
+            padding: 12px 22px;
+            height: inherit;
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid $darkSeaGreen;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            line-height: 22px;
+            color: #ABABAB;
+        }
+    }
+
+    &__message-wrap {
+        flex: 0 1 100%;
+    }
+
+    &__message-textarea {
+        height: 250px;
+
+        textarea {
+            padding: 28px 22px;
+            height: inherit;
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid $darkSeaGreen;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            line-height: 22px;
+            color: #ABABAB;
+        }
+    }
+
+    &__btn-confirm {
+        min-width: 220px;
+        padding: 23px 57px;
+        margin-top: 60px;
+    }
+}

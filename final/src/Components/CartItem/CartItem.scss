@@ -1,7 +1,7 @@
 @import '../../scss/variables';
 
 .CartItem {
-    padding: 40px 10%;
+    padding: 40px 0;
 
     &__wrap {
         position: relative;
@@ -19,7 +19,6 @@
 
     &__title {
         flex: 0 1 auto;
-        margin-left: 20px;
     }
 
 
@@ -49,6 +48,7 @@
     }
 
     &__quantity {
+        margin-left: 10px;
         padding: 28px 60px;
         border-radius: 16px;
         background-color: #fff;

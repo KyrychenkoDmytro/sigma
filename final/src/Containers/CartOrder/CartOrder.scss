@@ -1,5 +1,23 @@
 @import '../../scss/variables';
 
 .CartOrder {
+    padding: 60px 10%;
     background-color: $cartOrderBg;
+
+    &__total-cost {
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    &__total-discont {
+        margin-bottom: 80px;
+        font-weight: 700;
+        text-align: right;
+    }
+
+    &__btn-order {
+        margin: 0 auto;
+        padding: 23px 57px;
+    }
 }
