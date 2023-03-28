@@ -13,16 +13,16 @@ import Newsletter from '../../Components/Newsletter/Newsletter';
 const Home = () => {
     return (
         <main className="Home">
-            {/* <Banner /> */}
-            {/* <OfferBanner /> */}
-            {/* <AboutUs /> */}
-            {/* <Categories /> */}
-            {/* <Testimonial /> */}
-            {/* <Offer /> */}
-            {/* <EcoFriendly /> */}
-            {/* <Gallery /> */}
-            {/* <News /> */}
-            {/* <Newsletter /> */}
+            <Banner />
+            <OfferBanner />
+            <AboutUs />
+            <Categories />
+            <Testimonial />
+            <Offer />
+            <EcoFriendly />
+            <Gallery />
+            <News />
+            <Newsletter />
         </main>
     );
 }
