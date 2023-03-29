@@ -1,6 +1,7 @@
 import './CategoriesItem.scss';
 
-const CategoriesItem = () => {
+const CategoriesItem = (props) => {
+
     return (
         <section className="CategoriesItem">
             <span className="CategoriesItem__name">Vegetable</span>

@@ -1,0 +1,46 @@
+[
+    {
+        "category": "Vegetable",
+        "imageUrl": "https://i.postimg.cc/t4m07ZjW/broccoli.png",
+        "name": "Calabrese Broccoli",
+        "price": 20,
+        "discount": 0.3,
+        "rank": 5,
+        "info": "Broccoli is classified in the Italica cultivar group of the species Brassica oleracea.",
+        "description": "Broccoli is an edible green plant in the cabbage family whose large flowering head, stalk and small associated leaves are eaten as a vegetable",
+        "additionalInfo": "The word broccoli, first used in the 17th century, comes from the Italian plural of broccolo, which means the flowering crest of a cabbage, and is the diminutive form of brocco, meaning small nail or sprout."
+    },
+    {
+        "category": "Fresh",
+        "imageUrl": "https://i.postimg.cc/W14L2mQs/banana.png",
+        "name": "Banana",
+        "price": 18,
+        "discount": 0.2,
+        "rank": 4,
+        "info": "Bananas contain essential nutrients that may enhance heart health, help manage blood pressure.",
+        "description": "A banana is an elongated, edible fruit botanically a berry produced by several kinds of large herbaceous flowering plants in the genus Musa",
+        "additionalInfo": "In some countries, bananas used for cooking may be called plantains, distinguishing them from dessert bananas"
+    },
+    {
+        "category": "Nuts",
+        "imageUrl": "https://i.postimg.cc/Cx2tS3G4/pistachios.png",
+        "name": "Pistachios",
+        "price": 40,
+        "discount": 0.1,
+        "rank": 5,
+        "info": "Pistachios are a great source of healthy fats, fiber, protein, antioxidants, and various nutrients, including vitamin B6 and thiamine.",
+        "description": "The pistachio, a member of the cashew family, is a small tree originating from an area that includes Afghanistan, Central Asia, and Iran.",
+        "additionalInfo": "The tree produces seeds that are widely consumed as food."
+    },
+    {
+        "category": "Vegetable",
+        "imageUrl": "https://i.postimg.cc/1R0LwYS9/red-tomato.png",
+        "name": "Red Tomato",
+        "price": 40,
+        "discount": 0.1,
+        "rank": 5,
+        "info": "They are a great source of vitamin C, potassium, folate, and vitamin K.",
+        "description": "Tomatoes are loaded with a substance called lycopene. It gives them their bright red color and helps protect them from the ultraviolet rays of the sun.",
+        "additionalInfo": "Tomatoes also have potassium, vitamins B and E, and other nutrients."
+    }
+]
