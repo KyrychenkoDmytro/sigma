@@ -26,14 +26,6 @@ body {
   color: $darkSlateGray;
 }
 
-// .title-label {
-//   font-size: 36px;
-//   line-height: 48px;
-//   font-weight: 400;
-//   font-family: 'Yellowtail', cursive;
-//   color: $darkSeaGreen;
-// }
-
 h1 {
   @extend %h1;
 }

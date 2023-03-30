@@ -3,7 +3,6 @@ import './OfferBanner.scss';
 const OfferBanner = () => {
     return (
         <section className="OfferBanner">
-            <div className="container">
                 <div className="OfferBanner__wrap">
                     <div className="OfferBanner__block">
                         <div className='title-label OfferBanner__title-label'>Natural!!</div>
@@ -20,7 +19,6 @@ const OfferBanner = () => {
                         </h3>
                     </div>
                 </div>
-            </div>
         </section>
     );
 }

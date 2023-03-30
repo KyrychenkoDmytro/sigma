@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <main className="Home">
             <Banner />
-            {/* <OfferBanner /> */}
+            <OfferBanner />
             {/* <AboutUs /> */}
             {/* <Categories /> */}
             {/* <Testimonial /> */}
