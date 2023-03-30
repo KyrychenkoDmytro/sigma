@@ -27,7 +27,7 @@
     }
 
     &__button {
-        width: 56px;
+        flex: 0 0 56px;
         height: 56px;
         border-radius: 50%;
         display: flex;
@@ -45,5 +45,31 @@
             height: 22px;
             background: no-repeat center center url(../../../public/img/icons/search-loupe.svg);
         }
+    }
+}
+
+@media (max-width:1639.98px) {
+    .Search {
+        flex: 0 1 360px;
+    }
+}
+
+@media (max-width:1439.98px) {
+    .Search {
+        flex: 0 1 30%;
+        order: 4;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .Search {
+        flex: 0 1 32%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .Search {
+        flex: 0 1 46%;
+        order: 2;
     }
 }

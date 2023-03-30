@@ -1,5 +1,9 @@
 .Header {
-    padding: 70px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 60px 0;
     background-color: #fff;
 
     &__wrap {
@@ -10,5 +14,31 @@
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+    }
+}
+
+@media (max-width:1439.98px) {
+    .Header {
+        padding: 40px 0;
+
+        &__wrap {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .Header {
+        &__wrap {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .Header {
+        &__wrap {
+            padding: 0 20px;
+        }
     }
 }

@@ -19,3 +19,24 @@
         margin-bottom: 30px;
     }
 }
+
+@media (max-width: 1199.98px) {
+    .Banner {
+        background: url(../../../public/img/Banner-bg1.png) no-repeat center center / cover,
+            #E3F1E9 url(../../../public/img/Banner-bg2.png)no-repeat 36% center / cover;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .Banner {
+        background: url(../../../public/img/Banner-bg1.png) no-repeat center center / cover,
+            #E3F1E9 url(../../../public/img/Banner-bg2.png)no-repeat 38% center / cover;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .Banner {
+        background: url(../../../public/img/Banner-bg1.png) no-repeat 45% center / cover,
+            #E3F1E9 url(../../../public/img/Banner-bg2.png)no-repeat 45% center / cover;
+    }
+}

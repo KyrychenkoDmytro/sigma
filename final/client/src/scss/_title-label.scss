@@ -1,0 +1,26 @@
+.title-label {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 400;
+    font-family: 'Yellowtail', cursive;
+    color: $darkSeaGreen;
+
+    @media (max-width:1439.98px) {
+        & {
+            font-size: 34px;
+            line-height: 44px;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        & {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}

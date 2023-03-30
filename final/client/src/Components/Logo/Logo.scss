@@ -24,3 +24,16 @@
         color: $darkSlateGray;
     }
 }
+
+@media (max-width:1439.98px) {
+    .Logo {
+        flex: 0 1 40%;
+        order: 1;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .Logo {
+        flex: 0 1 20%;
+    }
+}
