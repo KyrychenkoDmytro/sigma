@@ -42,5 +42,134 @@
         "info": "They are a great source of vitamin C, potassium, folate, and vitamin K.",
         "description": "Tomatoes are loaded with a substance called lycopene. It gives them their bright red color and helps protect them from the ultraviolet rays of the sun.",
         "additionalInfo": "Tomatoes also have potassium, vitamins B and E, and other nutrients."
+    },
+    {
+        "category": "Health",
+        "imageUrl": "https://i.postimg.cc/fysp1Ycn/mung-bean.png",
+        "name": "Mung Bean",
+        "price": 28,
+        "discount": 0.2,
+        "rank": 4,
+        "info": "Mung beans are a good source of protein, fiber, vitamins, and minerals, making them a nutritious addition to any diet.",
+        "description": "They are low in calories and fat and have a low glycemic index, which means they can help regulate blood sugar levels.",
+        "additionalInfo": "It is commonly used in Asian and Indian cuisine and is known for its numerous health benefits."
+    },
+    {
+        "category": "Nuts",
+        "imageUrl": "https://i.postimg.cc/LsqcP997/brown-hazelnut.png",
+        "name": "Brown Hazelnut",
+        "price": 24,
+        "discount": 0.1,
+        "rank": 5,
+        "info": "They are high in healthy fats, protein, fiber, vitamins, and minerals, including vitamin E, magnesium, and potassium.",
+        "description": "Brown hazelnut, also known as filbert, is a type of nut that grows on the hazel tree.",
+        "additionalInfo": "Brown hazelnuts have a hard, brown shell that encases a creamy, pale-yellow kernel. They have a sweet, nutty flavor and a crunchy texture."
+    },
+
+    {
+        "category": "Fresh",
+        "imageUrl": "https://i.postimg.cc/KYddr64Y/eggs.png",
+        "name": "Eggs",
+        "price": 16,
+        "rank": 5,
+        "info": "Eggs are a good source of protein, vitamins, and minerals, including vitamin D, vitamin B12, iron, and selenium.",
+        "description": "They are a popular ingredient in many cuisines around the world and can be a healthy addition to a balanced diet.",
+        "additionalInfo": "Eggs consist of two parts - the yolk and the egg white."
+    },
+
+    {
+        "category": "Fresh",
+        "imageUrl": "https://i.postimg.cc/BQqRgcZ2/rusk.png",
+        "name": "Zelco Suji Elaichi Rusk",
+        "price": 16,
+        "discount": 0.4,
+        "rank": 3,
+        "info": "Zelco Suji Elaichi Rusk is a type of Indian biscuit that is made from a mixture of semolina (suji), cardamom (elaichi), and sugar.",
+        "description": "Rusk is essentially a twice-baked biscuit that is first baked until it is lightly golden and then baked again until it becomes crispy and dry.",
+        "additionalInfo": "It is typically enjoyed as a crunchy snack or dipped in tea or coffee."
+    },
+    {
+        "category": "Vegetable",
+        "imageUrl": "https://i.postimg.cc/MKqJLJ5M/courgette.png",
+        "name": "Courgette",
+        "price": 20,
+        "discount": 0.1,
+        "rank": 5,
+        "info": "Courgettes a good source of vitamin C, vitamin A, potassium, and dietary fiber.",
+        "description": "Courgette, also known as zucchini, is a type of summer squash that is commonly used in a variety of dishes around the world.",
+        "additionalInfo": "They are low in calories and high in nutrients, making them a healthy addition to any diet."
+    },
+    {
+        "category": "Nuts",
+        "imageUrl": "https://i.postimg.cc/RZhyrSHF/white-hazelnut.png",
+        "name": "Cashew",
+        "price": 28,
+        "rank": 4,
+        "info": "Cashews are a good source of protein, healthy fats, and minerals such as copper, magnesium, and phosphorus.",
+        "description": "Cashews are a type of tree nut that are native to Brazil but are now widely grown in many tropical regions around the world.",
+        "additionalInfo": "They are also a rich source of antioxidants, which can help protect the body from harmful free radicals."
+    },
+    {
+        "category": "Vegetable",
+        "imageUrl": "https://i.postimg.cc/bJk46m29/fresh-corn.png",
+        "name": "Corn",
+        "price": 12,
+        "discount": 0.2,
+        "rank": 3,
+        "info": "It is a good source of dietary fiber, vitamins, and minerals such as thiamine, folate, and potassium.",
+        "description": "Corn, also known as maize, is a cereal crop that is widely grown around the world for both human and animal consumption.",
+        "additionalInfo": "Corn is also processed into a wide range of food products, including cornmeal, corn flour, corn syrup, and corn oil."
+    },
+    {
+        "category": "Nuts",
+        "imageUrl": "https://i.postimg.cc/sfpRKgYC/almonds.png",
+        "name": "Almonds",
+        "price": 32,
+        "rank": 5,
+        "info": "Nutritionally, almonds are a good source of protein, healthy fats, fiber, and a variety of vitamins and minerals, including vitamin E, magnesium, and potassium.",
+        "description": "Almonds are a type of tree nut that are native to the Middle East but are now widely cultivated in many regions around the world.",
+        "additionalInfo": "They are also rich in antioxidants, which can help protect the body against harmful free radicals."
+    },
+    {
+        "category": "Vegetable",
+        "imageUrl": "https://i.postimg.cc/sDmCdHHn/cauliflower.png",
+        "name": "Cauliflower",
+        "price": 14,
+        "rank": 4,
+        "info": "It is a good source of vitamin C, vitamin K, folate, and potassium.",
+        "description": "Cauliflower is a cruciferous vegetable that is closely related to broccoli, kale, and cabbage.",
+        "additionalInfo": "Also contains smaller amounts of other vitamins and minerals, including calcium, iron, and magnesium."
+    },
+    {
+        "category": "Vegetable",
+        "imageUrl": "https://i.postimg.cc/wT0Zby3Z/vegetable-marrow.png",
+        "name": "Vegettable marrow",
+        "price": 10,
+        "discount": 0.1,
+        "rank": 5,
+        "info": "This vegetable is a good source of vitamins and minerals, including vitamin C, vitamin A, and potassium.",
+        "description": "Vegetable marrow is a type of summer squash that belongs to the same family as zucchini and pumpkin.",
+        "additionalInfo": "It is also low in calories and high in fiber, making it a healthy addition to any diet."
+    },
+    {
+        "category": "Vegetable",
+        "imageUrl": "https://i.postimg.cc/2yxMY3Gq/onion.png",
+        "name": "Onion",
+        "price": 6,
+        "rank": 5,
+        "info": "They are a good source of vitamin C, fiber, and antioxidants.",
+        "description": "Onions are a vegetable that belongs to the Allium family, which also includes garlic, shallots, and leeks.",
+        "additionalInfo": "They can be eaten raw, cooked, fried, or roasted, and can be used as a base for many sauces and gravies."
+    },
+    {
+        "category": "Vegetable",
+        "imageUrl": "https://i.postimg.cc/5yqdts42/cabbage.png",
+        "name": "Cabbage",
+        "price": 18,
+        "discount": 0.3,
+        "rank": 4,
+        "info": "Cabbage is also a nutrient-dense vegetable that is low in calories and high in fiber, vitamin C, and vitamin K.",
+        "description": "Cabbage is a leafy vegetable that belongs to the Brassica family, which also includes broccoli, cauliflower, and Brussels sprouts.",
+        "additionalInfo": "It also contains antioxidants and other beneficial plant compounds that have been linked to various health benefits."
     }
 ]

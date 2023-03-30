@@ -15,7 +15,7 @@ app.use(cors());
 app.get('/products', async (req, res) => {
 
     try {
-        const products = await ProductModel.find();
+        const products = await ProductModel.find().sort({discount: -1});
 
         if (!products) {
             return res.status(404).json({
