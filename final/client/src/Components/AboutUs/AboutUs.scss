@@ -2,6 +2,7 @@
 
 .AboutUs {
     width: 100%;
+    padding: 60px 0;
     background: $snow url(../../../public/img/AboutUs-bg.jpg) no-repeat center center / contain;
 
     &__wrap {
@@ -52,5 +53,62 @@
 
     &__advantage-info {
         width: 63%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .AboutUs {
+        background: $snow url(../../../public/img/AboutUs-bg.jpg) no-repeat center -3% / contain;
+
+        &__wrap {
+            align-items: flex-end;
+        }
+
+        &__block {
+            flex: 0 1 100%;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .AboutUs {
+        background: $snow url(../../../public/img/AboutUs-bg.jpg) no-repeat 65% center / cover;
+
+        &__wrap {
+            height: 800px;
+            align-items: center;
+        }
+
+        &__block {
+            flex: 0 1 100%;
+        }
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .AboutUs {
+        background: $snow;
+
+        &__wrap {
+            height: auto;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__advantage-block {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__advantage-info {
+            width: 100%;
+        }
     }
 }

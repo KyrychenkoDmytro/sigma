@@ -56,6 +56,16 @@ $cartOrderBg : rgba(253, 176, 45, 0.16);
 %h2 {
     font-size: 50px;
     line-height: 59px;
+
+    @media (max-width: 1199.98px) {
+        font-size: 44px;
+        line-height: 54px;
+    }
+
+    @media (max-width: 575.98px) {
+        font-size: 38px;
+        line-height: 46px;
+    }
 }
 
 %h3 {

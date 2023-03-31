@@ -15,7 +15,7 @@ const Home = () => {
         <main className="Home">
             <Banner />
             <OfferBanner />
-            {/* <AboutUs /> */}
+            <AboutUs />
             {/* <Categories /> */}
             {/* <Testimonial /> */}
             {/* <Offer /> */}
