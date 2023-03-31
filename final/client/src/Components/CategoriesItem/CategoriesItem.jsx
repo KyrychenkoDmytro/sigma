@@ -1,7 +1,6 @@
 import './CategoriesItem.scss';
 
 const CategoriesItem = (props) => {
-    console.log(props);
     const { category, name, imageUrl, price, discount, rank } = props;
     let newPrice;
     if (discount) {
