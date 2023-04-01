@@ -28,8 +28,8 @@ const Home = () => {
             {/* <AboutUs /> */}
             {/* <Categories /> */}
             {/* <Testimonial /> */}
-            <Offer />
-            {/* <EcoFriendly /> */}
+            {/* <Offer /> */}
+            <EcoFriendly />
             {/* <Gallery /> */}
             {/* <News /> */}
             {/* <Newsletter /> */}
