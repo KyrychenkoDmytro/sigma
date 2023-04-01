@@ -1,21 +1,17 @@
 import './Categories.scss';
 import CategoriesItem from '../../Components/CategoriesItem/CategoriesItem';
 
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts, selectDisplayedItemsInCategories } from '../../redux/slices/products';
+import { useSelector } from 'react-redux';
+import { selectDisplayedItemsInCategories } from '../../redux/slices/products';
 
 
 const Categories = () => {
 
-    const dispatch = useDispatch()
+   
     const displayedItems = useSelector(selectDisplayedItemsInCategories);
     // const { items } = useSelector(state => state.products);
     // console.log(items);
 
-    useEffect(() => {
-        dispatch(fetchProducts());
-    }, [dispatch])
 
     return (
         <section className="Categories">

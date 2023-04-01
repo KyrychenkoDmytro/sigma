@@ -10,13 +10,23 @@ import Gallery from '../../Components/Gallery/Gallery';
 import News from '../../Components/News/News';
 import Newsletter from '../../Components/Newsletter/Newsletter';
 
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchProducts } from '../../redux/slices/products';
+
 const Home = () => {
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchProducts());
+    }, [dispatch])
+
     return (
         <main className="Home">
             {/* <Banner /> */}
             {/* <OfferBanner /> */}
             {/* <AboutUs /> */}
-            <Categories />
+            {/* <Categories /> */}
             {/* <Testimonial /> */}
             <Offer />
             {/* <EcoFriendly /> */}
