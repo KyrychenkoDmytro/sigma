@@ -29,8 +29,8 @@ const Home = () => {
             {/* <Categories /> */}
             {/* <Testimonial /> */}
             {/* <Offer /> */}
-            <EcoFriendly />
-            {/* <Gallery /> */}
+            {/* <EcoFriendly /> */}
+            <Gallery />
             {/* <News /> */}
             {/* <Newsletter /> */}
         </main>
