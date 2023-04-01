@@ -30,8 +30,8 @@ const Home = () => {
             {/* <Testimonial /> */}
             {/* <Offer /> */}
             {/* <EcoFriendly /> */}
-            <Gallery />
-            {/* <News /> */}
+            {/* <Gallery /> */}
+            <News />
             {/* <Newsletter /> */}
         </main>
     );

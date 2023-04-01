@@ -59,7 +59,7 @@
 
     &__blog-info {
         position: relative;
-        top: 137px;
+        top: 130px;
         width: 100%;
         padding: 46px 57px 60px;
         border-radius: 30px;
@@ -91,5 +91,129 @@
 
     &__blog-text {
         margin-bottom: 15px;
+    }
+}
+
+@media (max-width:1639.98px) {
+    .News {
+        &__blog-info {
+            padding: 46px 46px 60px;
+        }
+    }
+}
+
+@media (max-width:1439.98px) {
+    .News {
+        padding: 140px 0 200px;
+
+        &__wrap-blogs {
+            gap: 30px;
+        }
+
+        &__blog-info {
+            top: 100px;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .News {
+        padding: 100px 0 160px;
+
+        &__wrap-blogs {
+            gap: 30px;
+        }
+
+        &__blog {
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        &__blog-info {
+            position: relative;
+            top: 120px;
+            width: 100%;
+            padding: 40px 30px 50px;
+            border-radius: 20px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .News {
+        padding: 100px 0 160px;
+
+        &__info {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__info-wrap-titles {
+            align-self: flex-start;
+        }
+
+        &__wrap-blogs {
+            gap: 15px;
+        }
+
+        &__blog {
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        &__blog-info {
+            position: relative;
+            top: 114px;
+            width: 100%;
+            padding: 30px 15px 40px;
+            border-radius: 15px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .News {
+        padding: 100px 0 140px;
+
+
+        &__wrap-blogs {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 100px;
+        }
+
+        &__blog {
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        &__blog-info {
+            position: relative;
+            top: 118px;
+            width: 100%;
+            padding: 40px 30px 50px;
+            border-radius: 20px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .News {
+        padding: 60px 0;
+
+        &__wrap-blogs {
+            gap: 40px;
+        }
+
+        &__blog {
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        &__blog-info {
+            position: relative;
+            top: 20px;
+            padding: 30px 5% 40px;
+            border-radius: 20px;
+        }
     }
 }
