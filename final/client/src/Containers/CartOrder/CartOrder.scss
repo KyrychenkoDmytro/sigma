@@ -8,16 +8,43 @@
         font-weight: 700;
         margin-bottom: 20px;
         text-align: right;
+
+        span {
+            margin-left: 20px;
+        }
     }
 
     &__total-discont {
         margin-bottom: 80px;
         font-weight: 700;
         text-align: right;
+
+        
+        span {
+            margin-left: 38px;
+        }
     }
 
     &__btn-order {
         margin: 0 auto;
         padding: 23px 57px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .CartOrder {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .CartOrder {
+        &__total-cost {
+            text-align: left;
+        }
+
+        &__total-discont {
+            text-align: left;
+        }
     }
 }
