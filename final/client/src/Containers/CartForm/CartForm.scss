@@ -81,3 +81,120 @@
         }
     }
 }
+
+@media (max-width:1439.98px) {
+    .CartForm {
+        &__input {
+            height: 74px;
+        }
+
+
+        &__message-textarea {
+            height: 220px;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .CartForm {
+
+        &__wrap {
+
+            form {
+                width: 100%;
+            }
+        }
+
+        &__label {
+            margin-bottom: 16px;
+        }
+
+        &__input {
+            height: 70px;
+        }
+
+
+        &__message-textarea {
+            height: 200px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .CartForm {
+
+        &__input {
+            height: 64px;
+        }
+
+        &__message-textarea {
+            height: 180px;
+
+            textarea {
+                padding: 20px;
+            }
+        }
+
+        &__btn-confirm {
+            min-width: auto;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .CartForm {
+        &__wrap {
+
+            form {
+                gap: 30px 2%;
+            }
+        }
+
+        &__label {
+            margin-bottom: 10px;
+        }
+
+        &__full-name-wrap,
+        &__email-wrap,
+        &__address-wrap,
+        &__phone-wrap {
+            flex: 0 1 49%;
+        }
+
+        &__input {
+            input {
+                border-radius: 10px;
+            }
+        }
+
+        &__message-textarea {
+            height: 160px;
+
+            textarea {
+                padding: 12px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .CartForm {
+        &__wrap {
+            form {
+                flex-direction: column;
+            }
+        }
+
+        &__full-name-wrap,
+        &__email-wrap,
+        &__address-wrap,
+        &__phone-wrap,
+        &__message-wrap {
+            flex: none;
+            width: 100%;
+            max-width: 420px;
+        }
+    }
+}
