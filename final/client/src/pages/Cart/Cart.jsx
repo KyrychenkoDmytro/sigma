@@ -8,8 +8,8 @@ const Cart = () => {
     return (
         <div className="Cart">
             {/* <CartBanner /> */}
-            {/* <CartOrder /> */}
-            <BannerAfterOrder />
+            <CartOrder />
+            {/* <BannerAfterOrder /> */}
         </div>
     );
 }

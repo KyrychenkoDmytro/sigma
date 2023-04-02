@@ -12,7 +12,7 @@ const CartOrder = () => {
                    <h3 className="title CartOrder__total-cost"><pre>Total Cost  <span>26$</span></pre></h3>
                    <h3 className="title CartOrder__total-discont"><pre>Discount    <span>14$</span></pre></h3>
                    <button className="btn btn_gray CartOrder__btn-order" id="btn-cart-to-order">To order</button>
-                   <CartForm />
+                   {/* <CartForm /> */}
                 </div>
             </div>
         </div>
