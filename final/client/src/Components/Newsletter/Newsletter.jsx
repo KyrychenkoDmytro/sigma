@@ -14,7 +14,7 @@ const Newsletter = () => {
                             <div className="Newsletter__input-mail">
                                 <input type="text" placeholder="Your Email Address" />
                             </div>
-                            <button className="btn btn_pagination-grey Newsletter__Info-btn" type="submit">Subscribe</button>
+                            <button className="btn btn_pagination-grey Newsletter__info-btn" type="submit">Subscribe</button>
                         </form>
                     </div>
 

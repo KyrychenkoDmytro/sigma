@@ -31,8 +31,8 @@ const Home = () => {
             {/* <Offer /> */}
             {/* <EcoFriendly /> */}
             {/* <Gallery /> */}
-            <News />
-            {/* <Newsletter /> */}
+            {/* <News /> */}
+            <Newsletter />
         </main>
     );
 }
