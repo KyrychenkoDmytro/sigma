@@ -14,7 +14,7 @@
         padding-left: 40px;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         gap: 20px;
     }
 
@@ -34,4 +34,99 @@
         margin-right: auto;
     }
 
+}
+
+@media (max-width:1639.98px) {
+    .PageNotFound {
+        padding: 180px 0;
+    }
+}
+
+@media (max-width:1439.98px) {
+    .PageNotFound {
+        padding: 120px 0;
+
+        &__info {
+            flex: 0 1 44%;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .PageNotFound {
+        padding: 60px 0;
+        background: url(../../../public/img/PageNotFound-bg1.svg) no-repeat 40% center / cover,
+            url(../../../public/img/PageNotFound-bg2.jpg) no-repeat 44% center / cover;
+
+        &__info {
+            flex: 0 1 52%;
+        }
+
+        &__info-img {
+            width: 70%;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .PageNotFound {
+        background: url(../../../public/img/PageNotFound-bg1.svg) no-repeat 43% center / cover,
+            url(../../../public/img/PageNotFound-bg2.jpg) no-repeat 43% center / cover;
+
+        &__info {
+            flex: 0 1 60%;
+        }
+
+        &__title {
+            font-size: 52px;
+            line-height: 60px;
+        }
+
+        &__btn {
+            padding: 24px 32px;
+            border-radius: 12px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .PageNotFound {
+        background: url(../../../public/img/PageNotFound-bg1.svg) no-repeat 50% center / cover,
+            url(../../../public/img/PageNotFound-bg2.jpg) no-repeat 50% center / cover;
+
+        &__info {
+            flex: 0 1 55%;
+            padding-left: 0;
+        }
+
+        &__title {
+            font-size: 42px;
+            line-height: 50px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .PageNotFound {
+        background: url(../../../public/img/PageNotFound-bg1.svg) no-repeat 50% center / cover,
+            url(../../../public/img/PageNotFound-bg2.jpg) no-repeat 50% center / cover;
+
+        &__info {
+            flex: 0 1 100%;
+            align-items: flex-end;
+        }
+
+        &__info-img {
+            width: 100%;
+            max-width: 290px;
+        }
+
+        &__text {
+            max-width: 290px;
+        }
+
+        &__btn {
+            margin: 0 auto;
+        }
+    }
 }
