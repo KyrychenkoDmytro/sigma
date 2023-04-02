@@ -24,6 +24,11 @@
         &__wrap {
             flex-wrap: wrap;
         }
+
+        &__Logo {
+            flex: 0 1 40%;
+            order: 1;
+        }
     }
 }
 

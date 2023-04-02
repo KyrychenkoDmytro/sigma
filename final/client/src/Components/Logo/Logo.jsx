@@ -1,8 +1,9 @@
 import './Logo.scss';
 
-const Logo = () => {
+const Logo = (props) => {
+    const { parentClass } = props;
     return (
-        <div className="Logo">
+        <div className={"Logo " + parentClass}>
             <div className="Logo__img-wrap">
                 <img src="./img/icons/logo.svg" alt="logo" />
             </div>

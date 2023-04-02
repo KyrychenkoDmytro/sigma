@@ -33,7 +33,7 @@ const Footer = () => {
                         </nav>
                     </div>
                     <div className="Footer__about">
-                        <Logo />
+                        <Logo parentClass="Logo_footer" />
                         <p className="Footer__about-text">Simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum simply dummy text of the printing </p>
                         <div className="Footer__about-socials">

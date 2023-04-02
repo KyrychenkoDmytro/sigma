@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className="Header">
             <div className="Header__wrap">
-                <Logo />
+                <Logo parentClass="Logo_header"/>
                 <Nav />
                 <Search />
                 <CartNavigate />
