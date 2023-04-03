@@ -25,6 +25,14 @@
     }
 }
 
+@media (max-width: 767.98px) {
+    .BannerAfterOrder {
+        &__title {
+            font-size: 46px;
+        }
+    }
+}
+
 @media (max-width: 575.98px) {
     .BannerAfterOrder {
         padding: 40px 0;
