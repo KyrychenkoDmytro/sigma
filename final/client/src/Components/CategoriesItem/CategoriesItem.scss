@@ -9,6 +9,7 @@
     padding: 30px;
     border-radius: 30px;
     background-color: #F9F8F8;
+    cursor: pointer;
 
     &__name {
         padding: 6px 12px;
@@ -19,6 +20,15 @@
         line-height: 21px;
         font-weight: 600;
         margin-bottom: auto;
+        transform: scale(1);
+        transition: all .3s ease;
+    }
+
+    &:hover {
+        .CategoriesItem__name {
+            color: $khaki;
+            transform: scale(1.2);
+        }
     }
 
     &__img {

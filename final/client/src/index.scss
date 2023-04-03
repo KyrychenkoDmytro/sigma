@@ -16,6 +16,10 @@ body {
   color: $darkSlateGray;
 }
 
+body._no-scroll {
+  overflow: hidden;
+}
+
 .wrapper {
   position: relative;
 }

@@ -1,0 +1,324 @@
+@import '../../scss/variables';
+
+.CategoriesModel {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(244, 244, 244, 0.82);
+    transform: scale(0);
+    transition: transform .4s ease;
+
+    &._active {
+        transform: scale(1);
+    }
+
+    &__wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-height: 100vh;
+        padding: 40px 0;
+        background-color: #FFFAFA;
+        overflow-y: auto;
+    }
+
+    &__block {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        margin-bottom: 30px;
+    }
+
+    &__name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 6px 12px;
+        border-radius: 8px;
+        background-color: $darkSlateGray;
+        color: #fff;
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 600;
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 64px;
+        height: 46px;
+        border-radius: 16px;
+        background-color: $darkSlateGray;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all .3s ease;
+        }
+
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover::before,
+        &:hover::after {
+            background-color: $khaki;
+        }
+    }
+
+    &__img {
+        flex: 0 0 350px;
+        height: 350px;
+        background: #FFFAFA url(../../../public/img/categories/broccoli.png) no-repeat center center / cover;
+        background-blend-mode: multiply;
+    }
+
+    &__product-name {
+        margin-bottom: 10px;
+    }
+
+    &__rating {
+        margin-bottom: 10px;
+    }
+
+    &__old-price {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #B8B8B8;
+        text-decoration: line-through;
+    }
+
+    &__new-price {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 700;
+        color: $darkSlateGray;
+    }
+
+    &__product-info {
+        width: 70%;
+        margin: 20px 0 30px;
+    }
+
+    &__wrapper-quantity {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__quantity-wrap-label-input {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__quantity-label {
+        white-space: nowrap;
+        font-family: 'Roboto', sans-serif;
+        font-size: 32px;
+        line-height: 46px;
+        font-weight: 700;
+    }
+
+    &__quantity-wrapper-input {
+        position: relative;
+        min-width: 134px;
+        height: 70px;
+        border-radius: 16px;
+        background-color: #fff;
+        border: 2px solid $darkSlateGray;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    &__quantity-input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        color: $darkSlateGray;
+        text-align: center;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    &__btn-add {
+        min-width: 210px;
+        padding: 23px 57px;
+        transition: background-color .3s ease;
+
+        &:focus {
+            background-color: $khaki;
+        }
+    }
+
+    &__info-wrap-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__info-btn {
+        padding: 23px 61px;
+
+        &::after {
+            content: none;
+        }
+    }
+
+    &__info-additional {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (max-width:1439.98px) {
+    .CategoriesModel {
+        &__product-info {
+            width: 85%;
+        }
+
+        &__info-additional {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .CategoriesModel {
+
+        &__product-info {
+            width: 100%;
+        }
+
+        &__block {
+            gap: 20px;
+        }
+
+        &__quantity-wrapper-input {
+            height: 62px;
+            min-width: 110px;
+            border-radius: 12px;
+        }
+
+        &__btn-add {
+            padding: 19px 40px;
+            border-radius: 12px;
+            min-width: unset;
+        }
+
+        &__info-btn {
+            padding: 19px 40px;
+            border-radius: 12px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .CategoriesModel {
+        &__block {
+            gap: 0;
+        }
+
+        &__img {
+            flex: 0 0 220px;
+            height: 220px;
+        }
+
+        &__wrapper-quantity {
+            gap: 16px;
+        }
+
+        &__quantity-wrap-label-input {
+            gap: 16px;
+        }
+
+        &__info-wrap-buttons {
+            gap: 16px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .CategoriesModel {
+
+        &__wrap {
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+        }
+
+        &__block {
+            flex-direction: column;
+        }
+
+        &__img {
+            flex: 0 0 auto;
+            width: 220px;
+            height: 220px;
+        }
+
+        &__wrapper-quantity {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .CategoriesModel {
+
+        &__product-info {
+            margin: 20px 0 10px;
+        }
+
+        &__wrapper-quantity {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__info-wrap-buttons {
+            flex-direction: column;
+        }
+
+        &__btn-add {
+            align-self: center;
+        }
+
+        &__info-wrap-buttons {
+            align-items: flex-start;
+        }
+    }
+}
