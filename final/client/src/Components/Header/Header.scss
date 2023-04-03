@@ -47,3 +47,13 @@
         }
     }
 }
+
+@media (max-width: 767.98px) {
+    .Header {
+        padding: 20px 0;
+
+        &__wrap {
+            padding: 0 4%;
+        }
+    }
+}

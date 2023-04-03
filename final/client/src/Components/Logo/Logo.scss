@@ -39,6 +39,20 @@
     }
 }
 
+@media (max-width: 767.98px) {
+    .Logo_header {
+        order: 2;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .Logo_header {
+        order: 3;
+        flex: 0 1 100%;
+        justify-content: center;
+    }
+}
+
 // ================== for footer ================
 
 // .Logo_footer

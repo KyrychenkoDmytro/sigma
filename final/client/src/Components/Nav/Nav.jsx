@@ -1,17 +1,31 @@
 import './Nav.scss';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = ({ active, setActive }) => {
+
+    const links = [
+        { to: '#', name: 'Home' },
+        { to: '#', name: 'About' },
+        { to: '#', name: 'Pages' },
+        { to: '#', name: 'Shop' },
+        { to: '#', name: 'Projects' },
+        { to: '#', name: 'News' }
+    ]
+
     return (
-        <div className="Nav">
+        <div className={active ? 'Nav _active' : 'Nav'}>
             <nav>
                 <ul className='Nav__ul'>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="#">About</Link></li>
-                    <li><Link to="#">Pages</Link></li>
-                    <li><Link to="#">Shop</Link></li>
-                    <li><Link to="#">Projects</Link></li>
-                    <li><Link to="#">News</Link></li>
+                    {links.map((item, i) => (
+                        <li key={i}>
+                            <Link
+                                onClick={() => setActive(false)}
+                                to={item.to}
+                            >
+                                {item.name}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </div>
