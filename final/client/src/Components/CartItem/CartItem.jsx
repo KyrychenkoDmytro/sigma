@@ -2,7 +2,7 @@ import './CartItem.scss';
 
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { changeCountProduct } from '../../redux/slices/cart';
+import { changeCountProduct, removeProduct } from '../../redux/slices/cart';
 
 const CartItem = ({ _id, name, imageUrl, count, price, discount }) => {
     const dispatch = useDispatch();
@@ -22,6 +22,12 @@ const CartItem = ({ _id, name, imageUrl, count, price, discount }) => {
         }
         setCountValue(count);
         dispatch(changeCountProduct({ _id, count }));
+    }
+
+    const removeFromCart = () => {
+        if (window.confirm("Are you sure you want to delete the product?")) {
+            dispatch(removeProduct(_id));
+        }
     }
 
     return (
@@ -46,7 +52,10 @@ const CartItem = ({ _id, name, imageUrl, count, price, discount }) => {
                         />
                     </div>
                 </div>
-                <button className="CartItem__btn-cancel-order"></button>
+                <button
+                    className="CartItem__btn-cancel-order"
+                    onClick={removeFromCart}
+                ></button>
             </div>
         </div>
     );

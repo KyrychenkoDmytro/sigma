@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const calcCoutProduct = (state) => {
-    state.countProducts = state.allProducts.reduce((sum, item) => item.count + sum, 0)
+    state.countProducts = state.allProducts.filter(item => !isNaN(item.count)).reduce((sum, item) => item.count + sum, 0)
 }
 
 const initialState = {
@@ -33,10 +33,15 @@ const cartSlice = createSlice({
             findProduct.count = action.payload.count;
 
             calcCoutProduct(state);
-        }
+        },
+        removeProduct: (state, action) => {
+            state.allProducts = state.allProducts.filter((item) => item._id !== action.payload);
+
+            calcCoutProduct(state);
+        },
     }
 })
 
-export const { addProductToCart, changeCountProduct } = cartSlice.actions;
+export const { addProductToCart, changeCountProduct, removeProduct } = cartSlice.actions;
 
 export default cartSlice.reducer;
