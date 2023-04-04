@@ -1,10 +1,14 @@
 import { useState, useRef } from 'react';
 import './CategoriesModel.scss';
 
+import { useDispatch } from 'react-redux';
+import { addProductToCart } from '../../redux/slices/slice';
+
 const CategoriesModel = ({ open, setOpen, product }) => {
 
-    const { name, category, imageUrl, price, discount, rank, info, description, additionalInfo } = product || {};
+    const { _id, name, category, imageUrl, price, discount, rank, info, description, additionalInfo } = product || {};
 
+    const dispatch = useDispatch();
     const [activeNameBtn, setActiveNameBtn] = useState('btn1');
     const [inputValue, setInputValue] = useState(1);
     const textRef = useRef(null);
@@ -18,6 +22,26 @@ const CategoriesModel = ({ open, setOpen, product }) => {
         const buttonName = e.target.name;
         setActiveNameBtn(buttonName);
         buttonName === 'btn1' ? textRef.current.textContent = description : textRef.current.textContent = additionalInfo;
+    }
+
+    const addToCart = (e) => {
+        if (inputValue <= 0) {
+            setInputValue(1);
+            e.target.blur();
+            return false;
+        }
+        const product = {
+            _id,
+            name,
+            category,
+            imageUrl,
+            price,
+            discount,
+            count: inputValue,
+        };
+        dispatch(addProductToCart(product));
+        setInputValue(1);
+        e.target.blur();
     }
 
     return (
@@ -52,11 +76,11 @@ const CategoriesModel = ({ open, setOpen, product }) => {
                                             className="CategoriesModel__quantity-input"
                                             type="number"
                                             value={inputValue}
-                                            onChange={(e) => setInputValue(e.target.value.replace(/e/gi, ''))}
+                                            onChange={(e) => setInputValue(parseInt(e.target.value.replace(/e/gi, '')))}
                                         />
                                     </div>
                                 </div>
-                                <button className="btn btn_gray CategoriesModel__btn-add">Add To Cart</button>
+                                <button className="btn btn_gray CategoriesModel__btn-add" onClick={addToCart}>Add To Cart</button>
                             </div>
                         </div>
                     </div>
