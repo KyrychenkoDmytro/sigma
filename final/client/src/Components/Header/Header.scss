@@ -5,6 +5,12 @@
     z-index: 10;
     padding: 40px 0;
     background-color: #fff;
+    transform: scale(1);
+    transition: transform .4s ease;
+
+    &._invisible {
+        transform: scale(0);
+    }
 
     &__wrap {
         max-width: 1680px;

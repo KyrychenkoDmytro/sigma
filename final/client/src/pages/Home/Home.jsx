@@ -12,12 +12,13 @@ import News from '../../Components/News/News';
 import Newsletter from '../../Components/Newsletter/Newsletter';
 
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { fetchProducts } from '../../redux/slices/products';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts, getProductById, checkHeaderVisibility } from '../../redux/slices/products';
 
 const Home = () => {
     const dispatch = useDispatch();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const modelProduct = useSelector(getProductById);
 
     useEffect(() => {
         dispatch(fetchProducts());
@@ -28,6 +29,8 @@ const Home = () => {
     useEffect(() => {
         const bodyClassList = document.body.classList;
         const mediaQuery = window.matchMedia('(max-width: 767.98px)');
+
+        dispatch(checkHeaderVisibility(isModalOpen));
 
         const handleResize = () => {
             bodyClassList.remove('_no-scroll');
@@ -40,11 +43,10 @@ const Home = () => {
         mediaQuery.addEventListener('change', handleResize);
 
         return () => {
-            console.log('work');
             mediaQuery.removeEventListener('change', handleResize);
             bodyClassList.remove('_no-scroll');
         };
-    }, [isModalOpen]);
+    }, [isModalOpen, dispatch]);
 
     return (
         <main className="Home">
@@ -52,7 +54,7 @@ const Home = () => {
             {/* <OfferBanner /> */}
             {/* <AboutUs /> */}
             <Categories open={isModalOpen} setOpen={setIsModalOpen} />
-            <CategoriesModel open={isModalOpen} setOpen={setIsModalOpen} />
+            <CategoriesModel open={isModalOpen} setOpen={setIsModalOpen} product={modelProduct} />
             {/* <Testimonial /> */}
             {/* <Offer /> */}
             {/* <EcoFriendly /> */}

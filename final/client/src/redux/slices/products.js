@@ -9,6 +9,7 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async ()
 
 // ==================== limiting the number of items in the category and offer sections =========================
 const selectItems = state => state.products.items;
+const id = state => state.products.modelId;
 
 export const selectDisplayedItemsInCategories = createSelector(
     selectItems,
@@ -17,18 +18,31 @@ export const selectDisplayedItemsInCategories = createSelector(
 
 export const selectDisplayedItemsInOffer = createSelector(
     selectItems,
-    (items) => items.filter(item=> item.category === 'Vegetable').slice(0, 4)   // limit 4 cards from the vegetable category
+    (items) => items.filter(item => item.category === 'Vegetable').slice(0, 4)   // limit 4 cards from the vegetable category
+);
+
+export const getProductById = createSelector(
+    [selectItems, id],
+    (items, id) => items.find(item => item._id === id)
 );
 
 const initialState = {
     items: [],
     status: 'loading',
+    modelId: '',
+    isHeaderVisible: true,
 }
 
 const productsSclice = createSlice({
     name: 'products',
     initialState,
     reducers: {
+        getModelId(state, action) {
+            state.modelId = action.payload;
+        },
+        checkHeaderVisibility(state, action) {
+            state.isHeaderVisible = !action.payload;
+        }
     },
     extraReducers: {
         [fetchProducts.pending]: (state) => {
@@ -46,6 +60,6 @@ const productsSclice = createSlice({
     }
 })
 
-export const { getMeEightProducts } = productsSclice.actions;
+export const { getModelId, checkHeaderVisibility } = productsSclice.actions;
 
 export default productsSclice.reducer;

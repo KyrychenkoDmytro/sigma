@@ -7,13 +7,15 @@ import CartNavigate from '../CartNavigate/CartNavigate';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const Header = () => {
     const [menuActive, setMenuActive] = useState(false);
+    const { isHeaderVisible } = useSelector(state => state.products);
 
     return (
-        <div className="Header">
+        <div className={isHeaderVisible ? "Header" : "Header _invisible"}>
             <div className="Header__wrap">
                 <BurgerMenu active={menuActive} onClick={() => setMenuActive(!menuActive)} />
                 <Link className='Header__Logo-link' to="/">
