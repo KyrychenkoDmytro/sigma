@@ -9,11 +9,12 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async ()
 
 // ==================== limiting the number of items in the category and offer sections =========================
 const selectItems = state => state.products.items;
+const limitItems = state => state.products.limitDisplayedItems;
 const id = state => state.products.modelId;
 
 export const selectDisplayedItemsInCategories = createSelector(
-    selectItems,
-    (items) => items.slice(0, 8)   // limit 8
+    [selectItems, limitItems],
+    (items, limit) => items.slice(0, limit)   // limit 8
 );
 
 export const selectDisplayedItemsInOffer = createSelector(
@@ -28,6 +29,7 @@ export const getProductById = createSelector(
 
 const initialState = {
     items: [],
+    limitDisplayedItems: 8,
     status: 'loading',
     modelId: '',
     isHeaderVisible: true,
@@ -37,6 +39,10 @@ const productsSclice = createSlice({
     name: 'products',
     initialState,
     reducers: {
+        changeLimitDisplayedItems(state, action) {
+            console.log(action.payload);
+            state.limitDisplayedItems = action.payload;
+        },
         getModelId(state, action) {
             state.modelId = action.payload;
         },
@@ -60,6 +66,6 @@ const productsSclice = createSlice({
     }
 })
 
-export const { getModelId, checkHeaderVisibility } = productsSclice.actions;
+export const { changeLimitDisplayedItems, getModelId, checkHeaderVisibility } = productsSclice.actions;
 
 export default productsSclice.reducer;

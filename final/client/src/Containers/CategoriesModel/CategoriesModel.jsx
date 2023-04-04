@@ -3,9 +3,10 @@ import './CategoriesModel.scss';
 
 const CategoriesModel = ({ open, setOpen, product }) => {
 
-    const {name, category, imageUrl, price, discount, rank, info, description, additionalInfo } = product || {};
+    const { name, category, imageUrl, price, discount, rank, info, description, additionalInfo } = product || {};
 
     const [activeNameBtn, setActiveNameBtn] = useState('btn1');
+    const [inputValue, setInputValue] = useState(1);
     const textRef = useRef(null);
 
     let newPrice;
@@ -47,7 +48,12 @@ const CategoriesModel = ({ open, setOpen, product }) => {
                                 <div className="CategoriesModel__quantity-wrap-label-input">
                                     <div className="CategoriesModel__quantity-label">Quantity : </div>
                                     <div className="CategoriesModel__quantity-wrapper-input">
-                                        <input className="CategoriesModel__quantity-input" type="text" defaultValue="1" />
+                                        <input
+                                            className="CategoriesModel__quantity-input"
+                                            type="number"
+                                            value={inputValue}
+                                            onChange={(e) => setInputValue(e.target.value.replace(/e/gi, ''))}
+                                        />
                                     </div>
                                 </div>
                                 <button className="btn btn_gray CategoriesModel__btn-add">Add To Cart</button>
@@ -63,7 +69,9 @@ const CategoriesModel = ({ open, setOpen, product }) => {
                                     "btn CategoriesModel__info-btn"
                                 }
                                 onClick={handleBtn}
-                            >Product Description</button>
+                            >
+                                Product Description
+                            </button>
                             <button
                                 name="btn2"
                                 className={activeNameBtn === "btn2" ?
