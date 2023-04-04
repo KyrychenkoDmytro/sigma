@@ -1,10 +1,10 @@
 import './CartNavigate.scss';
 
-const CartNavigate = () => {
+const CartNavigate = ({ count }) => {
     return (
         <div className="CartNavigate">
             <button className='CartNavigate__button'></button>
-            <div className="CartNavigate__name">Cart(<span>0</span>)</div>
+            <div className="CartNavigate__name">Cart(<span>{count}</span>)</div>
         </div>
     );
 }

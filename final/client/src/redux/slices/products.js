@@ -40,7 +40,6 @@ const productsSclice = createSlice({
     initialState,
     reducers: {
         changeLimitDisplayedItems(state, action) {
-            console.log(action.payload);
             state.limitDisplayedItems = action.payload;
         },
         getModelId(state, action) {

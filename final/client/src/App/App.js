@@ -1,5 +1,5 @@
 import './App.scss';
-import Header from '../Components/Header/Header';
+import Header from '../Containers/Header/Header';
 import Footer from '../Components/Footer/Footer';
 import Home from '../pages/Home/Home';
 import Cart from '../pages/Cart/Cart';

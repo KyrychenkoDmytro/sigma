@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import './CategoriesModel.scss';
 
 import { useDispatch } from 'react-redux';
-import { addProductToCart } from '../../redux/slices/slice';
+import { addProductToCart } from '../../redux/slices/cart';
 
 const CategoriesModel = ({ open, setOpen, product }) => {
 
@@ -33,7 +33,6 @@ const CategoriesModel = ({ open, setOpen, product }) => {
         const product = {
             _id,
             name,
-            category,
             imageUrl,
             price,
             discount,
@@ -41,7 +40,7 @@ const CategoriesModel = ({ open, setOpen, product }) => {
         };
         dispatch(addProductToCart(product));
         setInputValue(1);
-        e.target.blur();
+        setOpen(!open);
     }
 
     return (

@@ -1,9 +1,9 @@
 import './Header.scss';
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
-import Logo from '../Logo/Logo';
-import Nav from '../Nav/Nav';
-import Search from '../Search/Search';
-import CartNavigate from '../CartNavigate/CartNavigate';
+import BurgerMenu from '../../Components/BurgerMenu/BurgerMenu';
+import Logo from '../../Components/Logo/Logo';
+import Nav from '../../Components/Nav/Nav';
+import Search from '../../Components/Search/Search';
+import CartNavigate from '../../Components/CartNavigate/CartNavigate';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,7 @@ import { useSelector } from 'react-redux';
 const Header = () => {
     const [menuActive, setMenuActive] = useState(false);
     const { isHeaderVisible } = useSelector(state => state.products);
+    const { countProducts } = useSelector(state => state.cart);
 
     return (
         <div className={isHeaderVisible ? "Header" : "Header _invisible"}>
@@ -24,7 +25,7 @@ const Header = () => {
                 <Nav active={menuActive} setActive={setMenuActive} />
                 <Search />
                 <Link className='Header__CartNavigate-link' to="/cart">
-                    <CartNavigate />
+                    <CartNavigate count={countProducts}/>
                 </Link>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @import '../../scss/variables';
 
 .CartItem {
-    padding: 40px 0;
+    padding: 10px 0;
 
     &__wrap {
         position: relative;
@@ -19,7 +19,6 @@
     &__img {
         flex: 0 0 226px;
         height: 226px;
-        background: $cartOrderBg url(../../../public/img/categories/broccoli.png) no-repeat center center / cover;
         background-blend-mode: multiply;
     }
 

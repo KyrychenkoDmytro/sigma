@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const calcCoutProduct = (state) => {
+    state.countProducts = state.allProducts.reduce((sum, item) => item.count + sum, 0)
+}
+
 const initialState = {
     allProducts: [],
     countProducts: 0,
@@ -18,14 +22,21 @@ const cartSlice = createSlice({
             } else {
                 state.allProducts.push({
                     ...action.payload,
-                    count: 1,
+                    count: action.payload.count,
                 });
             }
-            // totalPriceAndTotalCount(state);
+            calcCoutProduct(state);
         },
+        changeCountProduct: (state, action) => {
+            console.log(action.payload)
+            const findProduct = state.allProducts.find((obj) => obj._id === action.payload._id);
+            findProduct.count = action.payload.count;
+
+            calcCoutProduct(state);
+        }
     }
 })
 
-export const { addProductToCart } = cartSlice.actions;
+export const { addProductToCart, changeCountProduct } = cartSlice.actions;
 
 export default cartSlice.reducer;
