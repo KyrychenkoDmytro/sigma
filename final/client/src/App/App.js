@@ -3,6 +3,7 @@ import Header from '../Containers/Header/Header';
 import Footer from '../Components/Footer/Footer';
 import Home from '../pages/Home/Home';
 import Cart from '../pages/Cart/Cart';
+import BannerAfterOrder from '../pages/BannerAfterOrder/BannerAfterOrder';
 import { Routes, Route } from 'react-router-dom';
 import PageNotFound from '../pages/PageNotFound/PageNotFound';
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/thanks' element={<BannerAfterOrder />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
         {/* <Footer /> */}

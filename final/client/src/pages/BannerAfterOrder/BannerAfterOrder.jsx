@@ -1,6 +1,11 @@
 import './BannerAfterOrder.scss';
+import { useEffect } from 'react';
 
 const BannerAfterOrder = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="BannerAfterOrder">

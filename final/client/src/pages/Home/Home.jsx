@@ -26,24 +26,36 @@ const Home = () => {
 
 
     // cancel scroll from body at resolution less than 768
-    useEffect(() => {
+    // useEffect(() => {
+    //     const bodyClassList = document.body.classList;
+    //     const mediaQuery = window.matchMedia('(max-width: 767.98px)');
+
+    //     dispatch(checkHeaderVisibility(isModalOpen));
+
+    //     const handleResize = () => {
+    //         bodyClassList.remove('_no-scroll');
+    //         if (mediaQuery.matches) {
+    //             isModalOpen ? bodyClassList.add('_no-scroll') : bodyClassList.remove('_no-scroll');
+    //         }
+    //     };
+    //     handleResize();
+
+    //     mediaQuery.addEventListener('change', handleResize);
+
+    //     return () => {
+    //         mediaQuery.removeEventListener('change', handleResize);
+    //         bodyClassList.remove('_no-scroll');
+    //     };
+    // }, [isModalOpen, dispatch]);
+
+        useEffect(() => {
         const bodyClassList = document.body.classList;
-        const mediaQuery = window.matchMedia('(max-width: 767.98px)');
+        bodyClassList.remove('_no-scroll');
 
         dispatch(checkHeaderVisibility(isModalOpen));
-
-        const handleResize = () => {
-            bodyClassList.remove('_no-scroll');
-            if (mediaQuery.matches) {
-                isModalOpen ? bodyClassList.add('_no-scroll') : bodyClassList.remove('_no-scroll');
-            }
-        };
-        handleResize();
-
-        mediaQuery.addEventListener('change', handleResize);
+        isModalOpen ? bodyClassList.add('_no-scroll') : bodyClassList.remove('_no-scroll');
 
         return () => {
-            mediaQuery.removeEventListener('change', handleResize);
             bodyClassList.remove('_no-scroll');
         };
     }, [isModalOpen, dispatch]);

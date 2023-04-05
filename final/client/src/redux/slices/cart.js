@@ -8,24 +8,24 @@ const calcCoutProduct = (state) => {
 
 const calcTotalCost = (state) => {
     state.totalCost = state.allProducts
-    .filter(item => !isNaN(item.count))
-    .reduce((sum, item) => {
-        let newPrice;
-        if (item.discount) {
-            newPrice = Math.floor(item.price * (1 - item.discount));
-        }
-        return item.discount ? item.count * newPrice + sum : item.count * item.price + sum;
-    }, 0);
+        .filter(item => !isNaN(item.count))
+        .reduce((sum, item) => {
+            let newPrice;
+            if (item.discount) {
+                newPrice = Math.floor(item.price * (1 - item.discount));
+            }
+            return item.discount ? item.count * newPrice + sum : item.count * item.price + sum;
+        }, 0);
 }
 
 const calcDiscount = (state) => {
     state.discount = state.allProducts
-    .filter(item => !isNaN(item.count) && item.discount)
-    .reduce((sum, item) => {
-          let newPrice = Math.floor(item.price * (1 - item.discount));
+        .filter(item => !isNaN(item.count) && item.discount)
+        .reduce((sum, item) => {
+            let newPrice = Math.floor(item.price * (1 - item.discount));
 
-        return (item.price - newPrice) * item.count + sum;
-    }, 0);
+            return (item.price - newPrice) * item.count + sum;
+        }, 0);
 }
 
 const initialState = {
@@ -54,7 +54,6 @@ const cartSlice = createSlice({
             calcDiscount(state);
         },
         changeCountProduct: (state, action) => {
-            console.log(action.payload)
             const findProduct = state.allProducts.find((obj) => obj._id === action.payload._id);
             findProduct.count = action.payload.count;
 
@@ -69,9 +68,15 @@ const cartSlice = createSlice({
             calcTotalCost(state);
             calcDiscount(state);
         },
+        clearAllInCartSlice: (state) => {
+            state.allProducts = [];
+            state.countProducts = 0;
+            state.totalCost = 0;
+            state.discount = 0;
+        }
     }
 })
 
-export const { addProductToCart, changeCountProduct, removeProduct } = cartSlice.actions;
+export const { addProductToCart, changeCountProduct, removeProduct, clearAllInCartSlice } = cartSlice.actions;
 
 export default cartSlice.reducer;

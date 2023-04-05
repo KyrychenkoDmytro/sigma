@@ -1,7 +1,12 @@
 import './PageNotFound.scss';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const PageNotFound = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="PageNotFound">

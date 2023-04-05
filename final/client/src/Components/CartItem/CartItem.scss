@@ -97,6 +97,13 @@
         border-radius: 16px;
         background-color: $darkSlateGray;
         cursor: pointer;
+        transform: scale(1);
+        transition: transform .3s ease;
+
+        &:hover,
+        &:focus {
+            transform: scale(1.2);
+        }
 
         &:before,
         &:after {
@@ -112,6 +119,13 @@
 
         &:after {
             transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        
+        &:hover::before,
+        &:hover::after,
+        &:focus::before,
+        &:focus::after {
+            background-color: $khaki;
         }
     }
 }

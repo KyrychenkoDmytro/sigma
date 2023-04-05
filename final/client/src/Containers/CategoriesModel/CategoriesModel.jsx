@@ -55,7 +55,10 @@ const CategoriesModel = ({ open, setOpen, product }) => {
 
     return (
         <div
-            onClick={() => setOpen(!open)}
+            onClick={() => {
+                setInputValue(1);
+                setOpen(!open);
+            }}
             className={open ? "CategoriesModel _active" : "CategoriesModel"}
         >
             <div
@@ -66,8 +69,11 @@ const CategoriesModel = ({ open, setOpen, product }) => {
                     <div className="CategoriesModel__block">
                         <span className="CategoriesModel__name">{category}</span>
                         <button
-                            onClick={() => setOpen(!open)}
                             className="CategoriesModel__btn-close"
+                            onClick={() => {
+                                setInputValue(1);
+                                setOpen(!open);
+                            }}
                         >
                         </button>
                         <div className="CategoriesModel__img" style={{ background: `#FFFAFA url(${imageUrl}) no-repeat center center / cover` }}></div>

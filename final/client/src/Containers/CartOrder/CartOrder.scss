@@ -29,6 +29,16 @@
     &__btn-order {
         margin: 0 auto;
         padding: 23px 57px;
+        transition: background-color .3s ease;
+
+        &._hide {
+            display: none;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: $khaki;
+        }
     }
 }
 

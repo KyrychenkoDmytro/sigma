@@ -2,6 +2,11 @@
 
 .CartForm {
     padding: 20px 0;
+    display: none;
+
+    &._active {
+        display: block;
+    }
 
     &__wrap {
 
@@ -21,6 +26,17 @@
     &__address-wrap,
     &__phone-wrap {
         flex: 0 1 48%;
+        align-self: flex-end;
+    }
+
+    &__error {
+        margin-bottom: 20px;
+        font-size: 25px;
+        line-height: 25px;
+        text-align: center;
+        font-weight: 500;
+        color: #e81212;
+        font-family: 'Roboto', sans-serif; 
     }
 
     &__label {

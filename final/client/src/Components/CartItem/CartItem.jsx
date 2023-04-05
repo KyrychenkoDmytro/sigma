@@ -43,6 +43,10 @@ const CartItem = ({ _id, name, imageUrl, count, price, discount }) => {
     return (
         <div className="CartItem">
             <div className="CartItem__wrap">
+                <button
+                    className="CartItem__btn-cancel-order"
+                    onClick={removeFromCart}
+                ></button>
                 <div className="CartItem__wrapper-img-title">
                     <div className="CartItem__img" style={{ background: `rgba(253, 176, 45, 0.16) url(${imageUrl}) no-repeat center center / cover` }}></div>
                     <h3 className="title CartItem__title">{name}</h3>
@@ -63,10 +67,6 @@ const CartItem = ({ _id, name, imageUrl, count, price, discount }) => {
                         />
                     </div>
                 </div>
-                <button
-                    className="CartItem__btn-cancel-order"
-                    onClick={removeFromCart}
-                ></button>
             </div>
         </div>
     );
