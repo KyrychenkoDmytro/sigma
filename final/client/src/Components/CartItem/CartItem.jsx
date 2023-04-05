@@ -24,6 +24,16 @@ const CartItem = ({ _id, name, imageUrl, count, price, discount }) => {
         dispatch(changeCountProduct({ _id, count }));
     }
 
+    const onBlurValue = () => {
+        if(isNaN(countValue)) {
+            setCountValue(1);
+            dispatch(changeCountProduct({ _id, count: 1 }));
+        } else {
+            setCountValue(countValue);
+            dispatch(changeCountProduct({ _id, count: countValue }));
+        }
+    }
+
     const removeFromCart = () => {
         if (window.confirm("Are you sure you want to delete the product?")) {
             dispatch(removeProduct(_id));
@@ -49,6 +59,7 @@ const CartItem = ({ _id, name, imageUrl, count, price, discount }) => {
                             type="number"
                             value={countValue}
                             onChange={newCountValue}
+                            onBlur={onBlurValue}
                         />
                     </div>
                 </div>

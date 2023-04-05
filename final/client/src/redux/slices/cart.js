@@ -1,7 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const calcCoutProduct = (state) => {
-    state.countProducts = state.allProducts.filter(item => !isNaN(item.count)).reduce((sum, item) => item.count + sum, 0)
+    state.countProducts = state.allProducts
+        .filter(item => !isNaN(item.count))
+        .reduce((sum, item) => item.count + sum, 0)
+}
+
+const calcTotalCost = (state) => {
+    state.totalCost = state.allProducts
+    .filter(item => !isNaN(item.count))
+    .reduce((sum, item) => {
+        let newPrice;
+        if (item.discount) {
+            newPrice = Math.floor(item.price * (1 - item.discount));
+        }
+        return item.discount ? item.count * newPrice + sum : item.count * item.price + sum;
+    }, 0);
+}
+
+const calcDiscount = (state) => {
+    state.discount = state.allProducts
+    .filter(item => !isNaN(item.count) && item.discount)
+    .reduce((sum, item) => {
+          let newPrice = Math.floor(item.price * (1 - item.discount));
+
+        return (item.price - newPrice) * item.count + sum;
+    }, 0);
 }
 
 const initialState = {
@@ -26,6 +50,8 @@ const cartSlice = createSlice({
                 });
             }
             calcCoutProduct(state);
+            calcTotalCost(state);
+            calcDiscount(state);
         },
         changeCountProduct: (state, action) => {
             console.log(action.payload)
@@ -33,11 +59,15 @@ const cartSlice = createSlice({
             findProduct.count = action.payload.count;
 
             calcCoutProduct(state);
+            calcTotalCost(state);
+            calcDiscount(state);
         },
         removeProduct: (state, action) => {
             state.allProducts = state.allProducts.filter((item) => item._id !== action.payload);
 
             calcCoutProduct(state);
+            calcTotalCost(state);
+            calcDiscount(state);
         },
     }
 })

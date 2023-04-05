@@ -24,8 +24,18 @@ const CategoriesModel = ({ open, setOpen, product }) => {
         buttonName === 'btn1' ? textRef.current.textContent = description : textRef.current.textContent = additionalInfo;
     }
 
+    const setValue = (e) => {
+        let count = parseInt(e.target.value.replace(/e/gi, ''));
+
+        if (count <= 0) {
+            setInputValue(1);
+            return false;
+        }
+        setInputValue(count);
+    }
+
     const addToCart = (e) => {
-        if (inputValue <= 0) {
+        if (inputValue <= 0 || isNaN(inputValue)) {
             setInputValue(1);
             e.target.blur();
             return false;
@@ -75,7 +85,8 @@ const CategoriesModel = ({ open, setOpen, product }) => {
                                             className="CategoriesModel__quantity-input"
                                             type="number"
                                             value={inputValue}
-                                            onChange={(e) => setInputValue(parseInt(e.target.value.replace(/e/gi, '')))}
+                                            onChange={setValue}
+                                            onBlur={() => isNaN(inputValue) ? setInputValue(1) : setInputValue(inputValue)}
                                         />
                                     </div>
                                 </div>
