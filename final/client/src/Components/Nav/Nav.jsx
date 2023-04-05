@@ -9,7 +9,7 @@ const Nav = ({ active, setActive }) => {
         { to: '#', name: 'Pages' },
         { to: '#', name: 'Shop' },
         { to: '#', name: 'Projects' },
-        { to: '#', name: 'News' }
+        { to: '/orders', name: 'Orders' }
     ]
 
     return (

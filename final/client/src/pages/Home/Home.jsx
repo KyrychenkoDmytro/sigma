@@ -24,30 +24,6 @@ const Home = () => {
         dispatch(fetchProducts());
     }, [dispatch]);
 
-
-    // cancel scroll from body at resolution less than 768
-    // useEffect(() => {
-    //     const bodyClassList = document.body.classList;
-    //     const mediaQuery = window.matchMedia('(max-width: 767.98px)');
-
-    //     dispatch(checkHeaderVisibility(isModalOpen));
-
-    //     const handleResize = () => {
-    //         bodyClassList.remove('_no-scroll');
-    //         if (mediaQuery.matches) {
-    //             isModalOpen ? bodyClassList.add('_no-scroll') : bodyClassList.remove('_no-scroll');
-    //         }
-    //     };
-    //     handleResize();
-
-    //     mediaQuery.addEventListener('change', handleResize);
-
-    //     return () => {
-    //         mediaQuery.removeEventListener('change', handleResize);
-    //         bodyClassList.remove('_no-scroll');
-    //     };
-    // }, [isModalOpen, dispatch]);
-
         useEffect(() => {
         const bodyClassList = document.body.classList;
         bodyClassList.remove('_no-scroll');
@@ -62,17 +38,17 @@ const Home = () => {
 
     return (
         <main className="Home">
-            {/* <Banner /> */}
-            {/* <OfferBanner /> */}
-            {/* <AboutUs /> */}
+            <Banner />
+            <OfferBanner />
+            <AboutUs />
             <Categories open={isModalOpen} setOpen={setIsModalOpen} />
             <CategoriesModel open={isModalOpen} setOpen={setIsModalOpen} product={modelProduct} />
-            {/* <Testimonial /> */}
-            {/* <Offer /> */}
-            {/* <EcoFriendly /> */}
-            {/* <Gallery /> */}
-            {/* <News /> */}
-            {/* <Newsletter /> */}
+            <Testimonial />
+            <Offer />
+            <EcoFriendly />
+            <Gallery />
+            <News />
+            <Newsletter />
         </main>
     );
 }
